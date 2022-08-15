@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import { css } from "@emotion/react";
 import mountain from "../assets/mountain.png";
 import manWithLaptop from "../assets/man-computer.png";
+import { Form } from "../components/Form";
 
 const hero = css`
   background-color: hsl(0, 10%, 65%);
@@ -70,6 +71,8 @@ const aboutTeam = css``;
 
 const warranty = css``;
 
+const contactUs = css``;
+
 export const Head = () => (
   <>
     <title>Welcome to NewPeak Comuputing</title>
@@ -79,47 +82,49 @@ export const Head = () => (
 
 const IndexPage = () => {
   return (
-    <body>
-      <Layout>
-        <main>
-          <section css={hero}>
-            <div css={strongTitle}>
-              <strong>New Peak Computing</strong>
-              <div>
-                <button
-                  css={[
-                    (theme) => ({
-                      color: "white",
-                      boxShadow: "0 1px 3 hsl(0, 0%, 74%)",
-                      backgroundColor: theme.colors.primary.light,
-                    }),
-                    projectPortalButton,
-                  ]}
-                >
-                  Start your project
-                </button>
-              </div>
+    <Layout>
+      <main>
+        <section css={hero}>
+          <div css={strongTitle}>
+            <strong>New Peak Computing</strong>
+            <div>
+              <button
+                css={[
+                  (theme) => ({
+                    color: "white",
+                    boxShadow: "0 1px 3 hsl(0, 0%, 74%)",
+                    backgroundColor: theme.colors.primary.light,
+                  }),
+                  projectPortalButton,
+                ]}
+              >
+                Start your project
+              </button>
             </div>
-          </section>
-          <section css={aboutWhatWeAre}>
-            <img src={manWithLaptop} width={300} />
-            <div css={paragraphExplanationWrapper}>
-              <p>
-                New Peak Computing is a Website development firm with over 20
-                years of experience in blockchain, manufacturing, and other
-                industries.
-              </p>
-              <p>
-                We provide Web development services to small business, startups
-                and enterprises across a range of industries.
-              </p>
-            </div>
-          </section>
-          <section css={aboutTeam}></section>
-          <section css={warranty}></section>
-        </main>
-      </Layout>
-    </body>
+          </div>
+        </section>
+        <section css={aboutWhatWeAre}>
+          <img src={manWithLaptop} width={300} />
+          <div css={paragraphExplanationWrapper}>
+            <p>
+              New Peak Computing is a Website development firm with over 20
+              years of experience in blockchain, manufacturing, and other
+              industries.
+            </p>
+            <p>
+              We provide Web development services to small business, startups
+              and enterprises across a range of industries.
+            </p>
+          </div>
+        </section>
+
+        <section css={aboutTeam}></section>
+        <section css={warranty}></section>
+        <section css={contactUs}>
+          <Form />
+        </section>
+      </main>
+    </Layout>
   );
 };
 
