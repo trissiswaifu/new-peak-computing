@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import mountain from "../assets/mountain.png";
 import manWithLaptop from "../assets/man-computer.png";
 import { Form } from "../components/Form";
+import styled from "@emotion/styled";
 
 const hero = css`
   background-color: hsl(0, 10%, 65%);
@@ -45,16 +46,31 @@ const strongTitle = css`
   gap: 2rem;
 `;
 
-const aboutWhatWeAre = css`
+const AboutWhatWeAre = styled("section")`
+  background-color: #357a92;
+  display: flex;
+  justify-content: center;
+`;
+
+const aboutWhatWeAreWrapper = css`
   padding-top: 1rem;
   padding-left: 0.5rem;
+  padding-bottom: 1rem;
   display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  max-width: 700px;
   background-color: #357a92;
   @media (min-width: 768px) {
     flex-direction: row;
+  }
+  img {
+    width: 300px;
+    @media (min-width: 425px) {
+      width: 400px;
+    }
   }
 `;
 
@@ -103,20 +119,22 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section css={aboutWhatWeAre}>
-          <img src={manWithLaptop} width={300} />
-          <div css={paragraphExplanationWrapper}>
-            <p>
-              New Peak Computing is a Website development firm with over 20
-              years of experience in blockchain, manufacturing, and other
-              industries.
-            </p>
-            <p>
-              We provide Web development services to small business, startups
-              and enterprises across a range of industries.
-            </p>
+        <AboutWhatWeAre>
+          <div css={aboutWhatWeAreWrapper}>
+            <img src={manWithLaptop} />
+            <div css={paragraphExplanationWrapper}>
+              <p>
+                New Peak Computing is a Website development firm with over 20
+                years of experience in blockchain, manufacturing, and other
+                industries.
+              </p>
+              <p>
+                We provide Web development services to small business, startups
+                and enterprises across a range of industries.
+              </p>
+            </div>
           </div>
-        </section>
+        </AboutWhatWeAre>
 
         <section css={aboutTeam}></section>
         <section css={warranty}></section>

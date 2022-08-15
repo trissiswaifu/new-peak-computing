@@ -8,16 +8,11 @@ import { LabelInput } from "./LabelInput";
 const FormWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.primary.dark};
   max-width: 500px;
-  padding: 1;
-  /* padding: 2rem; */
-  /* margin: 3rem; */
+  padding: 1rem;
 `;
 
 const form = css`
-  /* display: flex;
-  flex-direction: column; */
   color: white;
-  /* padding: 2rem; */
   span {
     padding-left: 0.5rem;
     padding-bottom: 0.25rem;
@@ -74,6 +69,8 @@ const NameLabelWrapper = styled(LabelWrapper)`
 
 const CompanyNameLabelWrapper = styled(LabelWrapper)``;
 
+const PhoneLabelWrapper = styled(LabelWrapper)``;
+
 const EmailLabelWrapper = styled(LabelWrapper)``;
 
 const SubjectLabelWrapper = styled(LabelWrapper)``;
@@ -96,6 +93,7 @@ const SubmitButtonWrapper = styled.div`
     font-weight: 600;
     border: 1px solid black;
     width: 25%;
+    min-width: 100px;
     border-radius: 0.25rem;
     padding: 0.5rem;
     background-color: ${(props) => props.theme.colors.primary.light};
@@ -122,19 +120,14 @@ export const Form = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // setInputs((values) => ({
-    //   ...values,
-    //   CustomerName: `${inputs.firstName} ${inputs.lastName}`,
-    // }));
-
     console.log(inputs);
-    // try {
-    //   const response = await baseApi.post("ContactForm/", inputs);
+    try {
+      const response = await baseApi.post("ContactForm/", inputs);
 
-    //   console.log(response);
-    // } catch (err) {
-    //   console.log(err);
-    // }
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -147,8 +140,8 @@ export const Form = () => {
                 autoComplete={"off"}
                 labelText="First Name"
                 type={"text"}
-                name={"firstName"}
-                value={inputs.firstName || ""}
+                name={"CustomerFirstName"}
+                value={inputs.CustomerFirstName || ""}
                 onChange={handleChange}
               />
             </NameLabelWrapper>
@@ -159,8 +152,8 @@ export const Form = () => {
                 autoComplete={"off"}
                 labelText="Last Name (optional)"
                 type={"text"}
-                name={"lastName"}
-                value={inputs.lastName || ""}
+                name={"CustomerLastName"}
+                value={inputs.CustomerLastName || ""}
                 onChange={handleChange}
               />
             </NameLabelWrapper>
@@ -175,6 +168,24 @@ export const Form = () => {
             onChange={handleChange}
           />
         </CompanyNameLabelWrapper>
+        <PhoneLabelWrapper>
+          <LabelInput
+            labelText="Phone Number"
+            type={"tel"}
+            name={"Phone"}
+            value={inputs.Phone || ""}
+            onChange={handleChange}
+          />
+        </PhoneLabelWrapper>
+        <EmailLabelWrapper>
+          <LabelInput
+            labelText="Email Address"
+            type={"email"}
+            name={"CustomerEmail"}
+            value={inputs.CustomerEmail || ""}
+            onChange={handleChange}
+          />
+        </EmailLabelWrapper>
         <SubjectLabelWrapper>
           <LabelInput
             labelText="Subject"
@@ -184,15 +195,7 @@ export const Form = () => {
             onChange={handleChange}
           />
         </SubjectLabelWrapper>
-        <EmailLabelWrapper>
-          <LabelInput
-            labelText="Your Email:"
-            type={"email"}
-            name={"CustomerEmail"}
-            value={inputs.CustomerEmail || ""}
-            onChange={handleChange}
-          />
-        </EmailLabelWrapper>
+
         <MessageLabelWrapper>
           <LabelInput
             labelText="Message"
