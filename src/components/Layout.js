@@ -13,7 +13,7 @@ const theme = {
     grey: {
       50: "#FAFAFA",
       100: "#F5F5F5",
-      200: "#616161",
+      200: "#EEEEEE",
       300: "#E0E0E0",
       400: "#BDBDBD",
       500: "#9E9E9E",
@@ -37,6 +37,30 @@ export const Layout = ({ children }) => {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+          }
+          ::-webkit-scrollbar {
+            width: 7px;
+          }
+
+          ::-webkit-scrollbar-track {
+            background: hsl(0, 0%, 25%);
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background: hsl(195, 97%, 24%);
+            border-radius: 0.5rem;
+          }
+
+          ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+          button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
           }
         `}
       />

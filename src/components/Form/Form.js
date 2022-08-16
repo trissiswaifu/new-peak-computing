@@ -2,23 +2,25 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { baseApi } from "../../Config/api";
+import { buttonPress, buttonPressOffHover } from "../../styles";
 import { LabelInput } from "./LabelInput";
 //TODO animation styles on submit button
 
 const FormWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.primary.dark};
+  background-color: ${(props) => props.theme.colors.grey["500"]};
   max-width: 500px;
   padding: 1rem;
 `;
 
 const form = css`
-  color: white;
   span {
+    color: white;
     padding-left: 0.5rem;
     padding-bottom: 0.25rem;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     font-size: 1.1rem;
+    user-select: none;
   }
 `;
 
@@ -32,12 +34,21 @@ const LabelWrapper = styled.div`
     flex-direction: column;
 
     input {
-      box-shadow: 0px 2px 0px 0px ${(props) => props.theme.colors.primary.main},
-        0px -2px 0px 0px ${(props) => props.theme.colors.grey["800"]};
+      border: 1px solid ${(props) => props.theme.colors.primary.main};
+      border-radius: 2px;
+      /* box-shadow: 0px 1px 0px 0px ${(props) =>
+        props.theme.colors.grey["400"]}, */
+      /* 0px -1px 0px 0px ${(props) => props.theme.colors.grey["600"]}; */
       font-size: 1.1rem;
       padding: 0.5rem;
-      color: ${(props) => props.theme.colors.grey[700]};
+      color: ${(props) => props.theme.colors.grey[800]};
       max-width: 100%;
+      &:focus {
+        outline: none;
+        border-color: ${(props) => props.theme.colors.primary.light};
+        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary.light};
+        /* box-shadow: "0 0 0 2px black"; */
+      }
     }
   }
 `;
@@ -46,10 +57,12 @@ const customerNamesWrapper = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
+  padding-bottom: 2rem;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    gap: 2rem;
   }
 `;
 
@@ -76,8 +89,30 @@ const EmailLabelWrapper = styled(LabelWrapper)``;
 const SubjectLabelWrapper = styled(LabelWrapper)``;
 
 const MessageLabelWrapper = styled(LabelWrapper)`
+  label {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+      /* border-top: 0.5rem solid ${(props) =>
+        props.theme.colors.primary.light}; */
+      border-radius: 2px;
+      min-height: 25ch;
+      resize: none;
+      box-shadow: 0px 1px 0px 0px ${(props) => props.theme.colors.grey["400"]},
+        0px -1px 0px 0px ${(props) => props.theme.colors.grey["600"]};
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      color: ${(props) => props.theme.colors.grey[800]};
+      max-width: 150%;
+      &:focus {
+        outline: none;
+        border-color: ${(props) => props.theme.colors.primary.light};
+        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary.light};
+      }
+    }
+  }
   input {
-    border-top: 3px solid ${(props) => props.theme.colors.dark};
   }
 `;
 
@@ -90,21 +125,27 @@ const SubmitButtonWrapper = styled.div`
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid black;
+    font-weight: 500;
+    /* border: 1px solid ${(props) => props.theme.colors.grey[50]}; */
     width: 25%;
     min-width: 100px;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
+    border-radius: 2px;
+    padding: 0.75rem;
+    border: none;
+    box-shadow: none;
     background-color: ${(props) => props.theme.colors.primary.light};
     color: ${(props) => props.theme.colors.grey[50]};
-    box-shadow: 0px 4px 6px 0px ${(props) => props.theme.colors.grey[700]};
+    /* box-shadow: 0px 4px 6px 0px ${(props) =>
+      props.theme.colors.grey[800]}; */
+    /* animation: ${buttonPressOffHover} 300ms ease forwards; */
     &:active {
       box-shadow: none;
+      opacity: 0.85;
     }
     &:hover {
+      /* animation: ${buttonPress} 300ms ease forwards; */
+      opacity: 0.85;
       cursor: pointer;
-      box-shadow: none;
     }
   }
 `;
@@ -197,13 +238,22 @@ export const Form = () => {
         </SubjectLabelWrapper>
 
         <MessageLabelWrapper>
-          <LabelInput
+          {/* <LabelInput
             labelText="Message"
             type={"text"}
             name={"Message"}
             value={inputs.Message || ""}
             onChange={handleChange}
-          />
+          /> */}
+          <label>
+            <span>Message</span>
+            <textarea
+              type="text"
+              name="Message"
+              value={inputs.Message || ""}
+              onChange={handleChange}
+            ></textarea>
+          </label>
         </MessageLabelWrapper>
         <SubmitButtonWrapper>
           <input type="submit" />

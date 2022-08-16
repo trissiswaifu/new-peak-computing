@@ -3,7 +3,6 @@ import { Layout } from "../components/Layout";
 import { css } from "@emotion/react";
 import mountain from "../assets/mountain.png";
 import manWithLaptop from "../assets/man-computer.png";
-import { Form } from "../components/Form";
 import styled from "@emotion/styled";
 
 const hero = css`
@@ -138,9 +137,6 @@ const IndexPage = () => {
 
         <section css={aboutTeam}></section>
         <section css={warranty}></section>
-        <section css={contactUs}>
-          <Form />
-        </section>
       </main>
     </Layout>
   );
