@@ -3,12 +3,24 @@ import React from "react";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
+//cyan theme
 const theme = {
   colors: {
     primary: {
-      light: "#357a92",
-      main: "hsl(195, 97%, 24%)",
-      dark: "#02475f",
+      50: "#E0F7FA",
+      100: "B2EBF2",
+      200: "#80DEEA",
+      300: "#4DD0E1",
+      400: "#26C6DA",
+      500: "#00BCD4",
+      600: "#00ACC1",
+      700: "#0097A7",
+      800: "#00838F",
+      900: "#006064",
+      A100: "#84FFFF",
+      A200: "#18FFFF",
+      A400: "#00E5FF",
+      A700: "#00B8D4",
     },
     grey: {
       50: "#FAFAFA",
@@ -31,6 +43,8 @@ export const Layout = ({ children }) => {
       <Global
         styles={css`
           body {
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
             width: 100%;
             height: 100%;
             background-color: hsl(0, 50%, 95%);

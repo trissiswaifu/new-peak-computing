@@ -19,6 +19,7 @@
     "@emotion/styled": "^11.9.3",
     "@radix-ui/react-dropdown-menu": "^1.0.0",
     "axios": "^0.27.2",
+    "framer-motion": "^7.2.0",
     "gatsby": "^4.19.2",
     "gatsby-plugin-emotion": "^7.19.0",
     "gatsby-plugin-manifest": "^4.19.0",

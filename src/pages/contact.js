@@ -6,33 +6,31 @@ import { ContactInfo } from "../components/ContactInfo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 const ContactUsSection = styled.section`
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  gap: 5rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   flex-direction: column;
   @media (min-width: 1024px) {
     flex-direction: row-reverse;
-    justify-content: space-around;
-    gap: 2rem;
-    /* div {
-      background-color: ${(props) => props.theme.colors.grey["600"]};
-      align-self: flex-start;
-    } */
+    justify-content: center;
+    gap: 5rem;
   }
 `;
-const ContactInfoDiv = styled.div``;
+const ContactInfoDiv = styled.div`
+  background-color: ${(props) => props.theme.colors.primary[900]};
+  padding: 1rem;
+  h3 {
+    color: ${(props) => props.theme.colors.grey[50]};
+  }
+`;
 
 const Contact = () => {
-  const isDesktop = useMediaQuery("(min-width: 1044px)");
   return (
     <Layout>
       <ContactUsSection>
-        {/* {isDesktop ? (
-          <ContactInfo
-          phoneNumber={"(307) 235-4016"}
-          address="4031 E 2nd St, Casper, WY 82609"
-        />
-        ) : null} */}
-
         <Form />
         <ContactInfoDiv>
           <h3>Contact Us</h3>
@@ -41,15 +39,6 @@ const Contact = () => {
             address="4031 E 2nd St, Casper, WY 82609"
           />
         </ContactInfoDiv>
-
-        {/* {isDesktop ? (
-          {isDesktop ? (
-            <ContactInfo
-              phoneNumber={"(307) 235-4016"}
-              address="4031 E 2nd St, Casper, WY 82609"
-            />
-          ) : null}
-        ) :  */}
       </ContactUsSection>
     </Layout>
   );

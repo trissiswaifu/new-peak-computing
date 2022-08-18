@@ -8,8 +8,12 @@ import { LabelInput } from "./LabelInput";
 
 const FormWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.grey["500"]};
-  max-width: 500px;
+  /* max-width: 600px; */
+  /* width: 100%; */
   padding: 1rem;
+  @media (min-width: 1024px) {
+    /* max-width: 800px; */
+  }
 `;
 
 const form = css`
@@ -34,20 +38,16 @@ const LabelWrapper = styled.div`
     flex-direction: column;
 
     input {
-      border: 1px solid ${(props) => props.theme.colors.primary.main};
+      border: 1px solid ${(props) => props.theme.colors.primary[300]};
       border-radius: 2px;
-      /* box-shadow: 0px 1px 0px 0px ${(props) =>
-        props.theme.colors.grey["400"]}, */
-      /* 0px -1px 0px 0px ${(props) => props.theme.colors.grey["600"]}; */
       font-size: 1.1rem;
       padding: 0.5rem;
       color: ${(props) => props.theme.colors.grey[800]};
-      max-width: 100%;
+
       &:focus {
         outline: none;
-        border-color: ${(props) => props.theme.colors.primary.light};
-        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary.light};
-        /* box-shadow: "0 0 0 2px black"; */
+        border-color: ${(props) => props.theme.colors.primary[300]};
+        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary[300]};
       }
     }
   }
@@ -75,7 +75,7 @@ const NameLabelWrapper = styled(LabelWrapper)`
       color: ${(props) => props.theme.colors.grey[700]};
       font-size: 1.1rem;
       padding: 0.5rem;
-      max-width: 200px;
+      /* max-width: 200px; */
     }
   }
 `;
@@ -104,11 +104,15 @@ const MessageLabelWrapper = styled(LabelWrapper)`
       font-size: 1.1rem;
       padding: 0.5rem;
       color: ${(props) => props.theme.colors.grey[800]};
-      max-width: 150%;
+      /* max-width: 150%; */
       &:focus {
         outline: none;
-        border-color: ${(props) => props.theme.colors.primary.light};
-        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary.light};
+        border-color: ${(props) => props.theme.colors.primary[300]};
+        box-shadow: 0 0 5px ${(props) => props.theme.colors.primary[300]};
+      }
+      @media (min-width: 768px) {
+        min-height: 12ch;
+        width: 500px;
       }
     }
   }
@@ -133,7 +137,7 @@ const SubmitButtonWrapper = styled.div`
     padding: 0.75rem;
     border: none;
     box-shadow: none;
-    background-color: ${(props) => props.theme.colors.primary.light};
+    background-color: ${(props) => props.theme.colors.primary[700]};
     color: ${(props) => props.theme.colors.grey[50]};
     /* box-shadow: 0px 4px 6px 0px ${(props) =>
       props.theme.colors.grey[800]}; */

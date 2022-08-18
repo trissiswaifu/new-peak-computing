@@ -32,7 +32,7 @@ const allLinksWrapper = css`
     font-size: calc(30 + 2vmin);
     opacity: 150%;
     @media (min-width: 1200px) {
-      font-size: 1.1rem;
+      font-size: 1.125rem;
     }
     &:hover {
       opacity: 0.8;

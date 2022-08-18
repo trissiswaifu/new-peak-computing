@@ -8,11 +8,11 @@ import { MobileNavbar } from "./MobileNavbar";
 import { NavbarLinks } from "./NavbarLinks";
 
 const navbarContainer = css`
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   padding: 0rem 1rem;
-  width: 100%;
-  z-index: 2;
+  /* width: 100%; */
+  /* z-index: 2; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,7 @@ export const Navbar = () => {
       <div css={navbarContainer}>
         <Logo width={75} />
         {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
+        {/* <DesktopNavbar /> */}
       </div>
     </>
   );
