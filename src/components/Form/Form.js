@@ -42,6 +42,7 @@ const LabelWrapper = styled.div`
       border-radius: 2px;
       font-size: 1.1rem;
       padding: 0.5rem;
+      background-color: ${(props) => props.theme.colors.grey[150]};
       color: ${(props) => props.theme.colors.grey[800]};
 
       &:focus {
@@ -104,6 +105,8 @@ const MessageLabelWrapper = styled(LabelWrapper)`
       font-size: 1.1rem;
       padding: 0.5rem;
       color: ${(props) => props.theme.colors.grey[800]};
+      background-color: ${(props) => props.theme.colors.grey[150]};
+
       /* max-width: 150%; */
       &:focus {
         outline: none;

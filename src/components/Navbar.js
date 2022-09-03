@@ -16,7 +16,7 @@ const navbarContainer = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsla(0, 0%, 60%, 0.7);
+  background-color: #006064;
   /* background: transparent; */
   border-bottom: 3px solid #a6a6a6;
   img {
