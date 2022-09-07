@@ -4,7 +4,7 @@ import { NavbarLinks } from "./NavbarLinks";
 import { BsChevronLeft } from "react-icons/bs";
 import styled from "@emotion/styled";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 
 const allLinksWrapper = css`
   display: flex;
@@ -54,10 +54,11 @@ const flex = css`
 const DropdownMenuItem = styled(DropdownMenu.Item)``;
 
 const DropdownMenuContent = styled(DropdownMenu.Content)`
-  background-color: ${(props) => props.theme.colors.grey["50"]};
+  background-color: ${(props) => props.theme.colors.primary["900"]};
 `;
 
 export const DesktopNavbar = () => {
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const navigateHandler = (url) => {
     //   event.preventDefault();
@@ -70,12 +71,18 @@ export const DesktopNavbar = () => {
       <DropdownMenu.Root>
         <DropdownMenu.Trigger>
           <div css={flex} onMouseEnter={() => setOpen(true)}>
-            <a>Solutions</a>
+            <span
+              css={css`
+                color: ${theme.colors.grey[50]};
+              `}
+            >
+              Services
+            </span>
             <BsChevronLeft color="white" />
           </div>
         </DropdownMenu.Trigger>
         <DropdownMenuContent>
-          <DropdownItemLabel>Services</DropdownItemLabel>
+          {/* <DropdownItemLabel>Services</DropdownItemLabel> */}
           <DropdownMenuItem
             onSelect={() => {
               navigateHandler("/services/#websitedesign");

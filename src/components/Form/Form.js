@@ -7,18 +7,19 @@ import { LabelInput } from "./LabelInput";
 //TODO animation styles on submit button
 
 const FormWrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.grey["500"]};
+  background-color: ${(props) => props.theme.colors.grey[300]};
   /* max-width: 600px; */
   /* width: 100%; */
-  padding: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   @media (min-width: 1024px) {
     /* max-width: 800px; */
   }
 `;
 
-const form = css`
+const StyledForm = styled.form`
   span {
-    color: white;
+    color: ${(props) => props.theme.colors.primary[900]};
     padding-left: 0.5rem;
     padding-bottom: 0.25rem;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -42,7 +43,7 @@ const LabelWrapper = styled.div`
       border-radius: 2px;
       font-size: 1.1rem;
       padding: 0.5rem;
-      background-color: ${(props) => props.theme.colors.grey[150]};
+      background-color: ${(props) => props.theme.colors.grey[100]};
       color: ${(props) => props.theme.colors.grey[800]};
 
       &:focus {
@@ -105,8 +106,7 @@ const MessageLabelWrapper = styled(LabelWrapper)`
       font-size: 1.1rem;
       padding: 0.5rem;
       color: ${(props) => props.theme.colors.grey[800]};
-      background-color: ${(props) => props.theme.colors.grey[150]};
-
+      background-color: ${(props) => props.theme.colors.grey[100]};
       /* max-width: 150%; */
       &:focus {
         outline: none;
@@ -180,7 +180,7 @@ export const Form = () => {
 
   return (
     <FormWrapper>
-      <form onSubmit={handleSubmit} css={form}>
+      <StyledForm onSubmit={handleSubmit}>
         <div css={customerNamesWrapper}>
           <div>
             <NameLabelWrapper>
@@ -265,7 +265,7 @@ export const Form = () => {
         <SubmitButtonWrapper>
           <input type="submit" />
         </SubmitButtonWrapper>
-      </form>
+      </StyledForm>
     </FormWrapper>
   );
 };

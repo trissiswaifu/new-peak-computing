@@ -8,7 +8,7 @@ const theme = {
   colors: {
     primary: {
       50: "#E0F7FA",
-      100: "B2EBF2",
+      100: "#B2EBF2",
       200: "#80DEEA",
       300: "#4DD0E1",
       400: "#26C6DA",

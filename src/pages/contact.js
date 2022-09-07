@@ -3,7 +3,9 @@ import React from "react";
 import { Form } from "../components/Form";
 import { Layout } from "../components/Layout";
 import { ContactInfo } from "../components/ContactInfo";
+import { motion } from "framer-motion";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+//TODO add toast alert on successful  submission
 const ContactUsSection = styled.section`
   display: flex;
   justify-content: center;

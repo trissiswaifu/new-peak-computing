@@ -5,8 +5,8 @@ import styled from "@emotion/styled";
 const ColumnWrapper = styled.div`
   display: flex;
   max-width: fit-content;
-  /* padding: 1rem; */
   flex-direction: column;
+  grid-column: span 6;
   a {
     color: ${(props) => props.theme.colors.grey[900]};
     line-height: 2rem;
@@ -19,13 +19,14 @@ const ColumnWrapper = styled.div`
     color: ${(props) => props.theme.colors.primary[900]};
   }
   @media (min-width: 1024px) {
+    grid-column: span 4;
     a {
       text-decoration: none;
 
       &:hover {
         color: ${(props) => props.theme.colors.grey[50]};
         opacity: 0.9;
-        transition: color 350ms;
+        transition: color 200ms ease-in-out;
       }
     }
   }

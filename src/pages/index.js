@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import mountain from "../assets/mountain.png";
 import manWithLaptop from "../assets/man-computer.png";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const hero = css`
   background-color: hsl(0, 10%, 65%);
@@ -86,11 +87,9 @@ const aboutTeam = css``;
 
 const warranty = css``;
 
-const contactUs = css``;
-
 export const Head = () => (
   <>
-    <title>Welcome to NewPeak Comuputing</title>
+    <title>Welcome to New Peak Comuputing</title>
     <meta name="description" content="NewPeak Computing" />
   </>
 );
@@ -98,7 +97,7 @@ export const Head = () => (
 const IndexPage = () => {
   return (
     <Layout>
-      <main>
+      <motion.main>
         <section css={hero}>
           <div css={strongTitle}>
             <strong>New Peak Computing</strong>
@@ -120,7 +119,7 @@ const IndexPage = () => {
         </section>
         <AboutWhatWeAre>
           <div css={aboutWhatWeAreWrapper}>
-            <img src={manWithLaptop} />
+            <img src={manWithLaptop} alt="Person using a laptop" />
             <div css={paragraphExplanationWrapper}>
               <p>
                 New Peak Computing is a Website development firm with over 20
@@ -137,7 +136,7 @@ const IndexPage = () => {
 
         <section css={aboutTeam}></section>
         <section css={warranty}></section>
-      </main>
+      </motion.main>
     </Layout>
   );
 };
