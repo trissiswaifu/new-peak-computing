@@ -22,9 +22,10 @@ export const Navbar = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: ${theme.colors.primary.A700};
+          /* background-color: ${theme.colors.grey[200]}; */
+          background-color: #fff;
           /* background: transparent; */
-          border-bottom: 3px solid #a6a6a6;
+          /* border-bottom: 1px solid #a6a6a6; */
           img {
             padding-left: 0rem;
           }

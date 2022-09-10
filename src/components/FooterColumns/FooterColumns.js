@@ -8,6 +8,9 @@ const ColumnWrapper = styled.div`
   flex-direction: column;
   grid-column: span 6;
   a {
+    /* text-decoration: none; */
+    /* max-width: fit-content; */
+    /* border-bottom: 2px solid black; */
     color: ${(props) => props.theme.colors.grey[900]};
     line-height: 2rem;
     margin-top: 0.5rem;

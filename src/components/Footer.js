@@ -16,6 +16,7 @@ const FooterStyled = styled.footer`
   /* flex-direction: column; */
   /* justify-content: center; */
   /* padding: 0.5rem; */
+  margin-top: auto;
 `;
 
 const LogosWrapper = styled.footer`

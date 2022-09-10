@@ -65,7 +65,29 @@ export const DesktopNavbar = () => {
     navigate(url);
   };
   return (
-    <div css={allLinksWrapper}>
+    <div
+      css={css`
+        display: flex;
+        gap: 1rem;
+        padding-right: 1.5rem;
+        font-weight: 500;
+        color: ${theme.colors.primary[800]};
+        a {
+          text-decoration: none;
+          /* color: white; */
+          font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+          font-size: calc(30 + 2vmin);
+          opacity: 150%;
+          @media (min-width: 1200px) {
+            font-size: 1.125rem;
+          }
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      `}
+    >
       <Link to="/">Home</Link>
 
       <DropdownMenu.Root>
@@ -73,62 +95,61 @@ export const DesktopNavbar = () => {
           <div css={flex} onMouseEnter={() => setOpen(true)}>
             <span
               css={css`
-                color: ${theme.colors.grey[50]};
+                color: ${theme.colors.primary[800]};
               `}
             >
               Services
             </span>
-            <BsChevronLeft color="white" />
+            <BsChevronLeft color="cyan" />
           </div>
         </DropdownMenu.Trigger>
         <DropdownMenuContent>
-          {/* <DropdownItemLabel>Services</DropdownItemLabel> */}
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#websitedesign");
+              navigateHandler("/services/website-design");
             }}
           >
             Website Design, Building And Hosting
           </DropdownMenuItem>
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#emailhosting");
+              navigateHandler("/services/email-hosting");
             }}
           >
             Email Hosting & Management
           </DropdownMenuItem>
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#itservices");
+              navigateHandler("/services/it-services");
             }}
           >
             IT Services
           </DropdownMenuItem>
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#smallbusinessapps");
+              navigateHandler("/services/small-businessapps");
             }}
           >
             Small Business Applications
           </DropdownMenuItem>
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#business2business");
+              navigateHandler("/services/business2business");
             }}
           >
             Business to Business Software
           </DropdownMenuItem>
           <DropdownMenuItem
             onSelect={() => {
-              navigateHandler("/services/#automationservice");
+              navigateHandler("/services/automation-service");
             }}
           >
             Automation Services
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu.Root>
-      <Link to="contact">Contact Us</Link>
-      <Link to="about">About</Link>
+      <Link to="/contact">Contact Us</Link>
+      {/* <Link to="about">About</Link> */}
     </div>
   );
 };

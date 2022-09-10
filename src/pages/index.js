@@ -5,6 +5,8 @@ import mountain from "../assets/mountain.png";
 import manWithLaptop from "../assets/man-computer.png";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import { PrimaryButton } from "../components/PrimaryButton";
+import { Link } from "gatsby";
 
 const hero = css`
   background-color: hsl(0, 10%, 65%);
@@ -102,7 +104,7 @@ const IndexPage = () => {
           <div css={strongTitle}>
             <strong>New Peak Computing</strong>
             <div>
-              <button
+              {/* <button
                 css={[
                   (theme) => ({
                     color: "white",
@@ -113,7 +115,10 @@ const IndexPage = () => {
                 ]}
               >
                 Start your project
-              </button>
+              </button> */}
+              <Link to="/contact">
+                <PrimaryButton text={"Start your project"} />
+              </Link>
             </div>
           </div>
         </section>
