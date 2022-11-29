@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { baseApi } from "../../Config/api";
-import { buttonPress, buttonPressOffHover } from "../../styles";
 import { LabelInput } from "./LabelInput";
 //TODO animation styles on submit button
 
@@ -144,13 +143,11 @@ const SubmitButtonWrapper = styled.div`
     color: ${(props) => props.theme.colors.grey[50]};
     /* box-shadow: 0px 4px 6px 0px ${(props) =>
       props.theme.colors.grey[800]}; */
-    /* animation: ${buttonPressOffHover} 300ms ease forwards; */
     &:active {
       box-shadow: none;
       opacity: 0.85;
     }
     &:hover {
-      /* animation: ${buttonPress} 300ms ease forwards; */
       opacity: 0.85;
       cursor: pointer;
     }

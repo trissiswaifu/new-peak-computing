@@ -1,7 +1,7 @@
 import { css, Global, ThemeProvider } from "@emotion/react";
 import React from "react";
 import { Footer } from "./Footer";
-import { Navbar } from "./Navbar";
+import { NavMenu } from "./NavMenu";
 
 //cyan theme
 const theme = {
@@ -82,7 +82,7 @@ export const Layout = ({ children }) => {
         `}
       />
       <ThemeProvider theme={theme}>
-        <Navbar />
+        <NavMenu />
         {children}
         <Footer />
       </ThemeProvider>

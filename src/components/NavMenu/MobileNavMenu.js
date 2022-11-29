@@ -14,12 +14,12 @@ const bars = css`
   gap: 0.5rem;
 `;
 
-export const MobileNavbar = () => {
+export const MobileNavMenu = () => {
   const theme = useTheme();
   const [open, setOpen] = useState();
   const [isClicked, setIsClicked] = useState(false);
 
-  const navigateHandler = (url) => {
+  const handleNavigate = (url) => {
     navigate(url);
   };
 
@@ -35,11 +35,11 @@ export const MobileNavbar = () => {
       <div css={bars} onClick={handleClick}>
         <motion.span
           initial={{ x: 0, opacity: 1 }}
-          animate={isClicked ? { rotate: 45, y: 9 } : { x: 0, opacity: 1 }}
+          // animate={isClicked ? { rotate: 45, y: 9 } : { x: 0, opacity: 1 }}
           //mountain close button
-          // animate={
-          // isClicked ? { rotate: -60, y: 6, x: -7 } : { x: 0, opacity: 1 }
-          // }
+          animate={
+            isClicked ? { rotate: -60, y: 6, x: -7 } : { x: 0, opacity: 1 }
+          }
           css={css`
             height: 1px;
             width: 30px;
@@ -53,17 +53,17 @@ export const MobileNavbar = () => {
             width: 30px;
             background-color: ${theme.colors.grey[900]};
           `}
-          animate={isClicked ? { x: 20, opacity: 0 } : { x: 0, opacity: 1 }}
+          // animate={isClicked ? { x: 20, opacity: 0 } : { x: 0, opacity: 1 }}
           //mountain close button
-          // animate={
-          // isClicked ? { rotate: 60, y: -4, x: 8 } : { x: 0, opacity: 1 }
-          // }
+          animate={
+            isClicked ? { rotate: 60, y: -4, x: 8 } : { x: 0, opacity: 1 }
+          }
         />
         <motion.span
           initial={{ x: 0, opacity: 1 }}
-          animate={isClicked ? { rotate: -45, y: -9 } : { x: 0, opacity: 1 }}
+          // animate={isClicked ? { rotate: -45, y: -9 } : { x: 0, opacity: 1 }}
           //mountain close button
-          // animate={isClicked ? { y: 0 } : { x: 0, opacity: 1 }}
+          animate={isClicked ? { y: 0 } : { x: 0, opacity: 1 }}
           css={css`
             height: 1px;
             width: 30px;
@@ -115,7 +115,7 @@ export const MobileNavbar = () => {
               <DropdownMenu.Content>
                 <DropdownMenu.Item
                   onSelect={() => {
-                    navigateHandler("/services/website-design");
+                    handleNavigate("/services/website-design");
                   }}
                 >
                   Website Design, Building And Hosting

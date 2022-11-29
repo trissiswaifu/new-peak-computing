@@ -1,10 +1,13 @@
 import React from "react";
+import { Layout } from "../../components/Layout";
 
 const Index = () => {
   return (
-    <div>
-      <hi>Services at newpeak</hi>
-    </div>
+    <Layout>
+      <div>
+        <h1>Services at newpeak</h1>
+      </div>
+    </Layout>
   );
 };
 

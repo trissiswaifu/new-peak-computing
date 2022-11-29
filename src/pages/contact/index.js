@@ -1,10 +1,14 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { Form } from "../components/Form";
-import { Layout } from "../components/Layout";
-import { ContactInfo } from "../components/ContactInfo";
+import { Form } from "../../components/Form";
+import { Layout } from "../../components/Layout";
+import { ContactInfo } from "../../components/ContactInfo";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import {
+  newPeakAddress,
+  newPeakPhoneNumber,
+} from "../../Constants/contactInfo";
 //TODO add toast alert on successful  submission
 const ContactUsSection = styled.section`
   display: flex;
@@ -29,21 +33,23 @@ const ContactInfoDiv = styled.div`
   }
 `;
 
-const Contact = () => {
+const Index = () => {
   return (
     <Layout>
-      <ContactUsSection>
-        <Form />
-        <ContactInfoDiv>
-          <h3>Contact Us</h3>
-          <ContactInfo
-            phoneNumber={"(307) 235-4016"}
-            address="4031 E 2nd St, Casper, WY 82609"
-          />
-        </ContactInfoDiv>
-      </ContactUsSection>
+      <motion.main>
+        <ContactUsSection>
+          <Form />
+          <ContactInfoDiv>
+            <h3>Contact Us</h3>
+            <ContactInfo
+              phoneNumber={newPeakPhoneNumber}
+              address={newPeakAddress}
+            />
+          </ContactInfoDiv>
+        </ContactUsSection>
+      </motion.main>
     </Layout>
   );
 };
 
-export default Contact;
+export default Index;
