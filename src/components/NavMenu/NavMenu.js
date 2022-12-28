@@ -25,6 +25,7 @@ export const NavMenu = () => {
           background-color: ${theme.colors.primary[900]};
           /* background: transparent; */
           border-bottom: 1px solid ${theme.colors.grey[50]};
+          z-index: 9999;
           img {
             padding-left: 0rem;
           }

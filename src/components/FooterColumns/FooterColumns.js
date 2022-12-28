@@ -8,18 +8,14 @@ const ColumnWrapper = styled.div`
   flex-direction: column;
   grid-column: span 6;
   a {
-    /* text-decoration: none; */
-    /* max-width: fit-content; */
-    /* border-bottom: 2px solid black; */
     color: ${(props) => props.theme.colors.grey[900]};
     line-height: 2rem;
     margin-top: 0.5rem;
   }
-  /* background-color: ${(props) => props.theme.colors.grey[900]}; */
   padding: 1rem;
   h5 {
     font-size: 1.25rem;
-    color: ${(props) => props.theme.colors.primary[900]};
+    color: ${(props) => props.theme.colors.grey[900]};
   }
   @media (min-width: 1024px) {
     grid-column: span 4;
@@ -29,7 +25,7 @@ const ColumnWrapper = styled.div`
       &:hover {
         color: ${(props) => props.theme.colors.grey[50]};
         opacity: 0.9;
-        transition: color 200ms ease-in-out;
+        transition: color 150ms ease-in-out;
       }
     }
   }

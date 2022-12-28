@@ -2,6 +2,7 @@ import { Link, navigate } from "gatsby";
 import React, { useState } from "react";
 import { css, useTheme } from "@emotion/react";
 import { NavMenuServicesDropdown } from "./NavMenuServicesDropdown";
+import { NavMenuSampleDropdown } from "./NavMenuSampleDropdown";
 
 export const DesktopNavMenu = () => {
   const theme = useTheme();
@@ -33,6 +34,7 @@ export const DesktopNavMenu = () => {
     >
       <Link to="/">Home</Link>
       <NavMenuServicesDropdown />
+      <NavMenuSampleDropdown />
       <Link to="/contact">Contact Us</Link>
       {/* <Link to="about">About</Link> */}
     </div>
