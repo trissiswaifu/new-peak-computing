@@ -2,6 +2,7 @@ import { css, Global, ThemeProvider } from "@emotion/react";
 import React from "react";
 import { Footer } from "./Footer";
 import { NavMenu } from "./NavMenu";
+import "./src/styles/global.css";
 
 //cyan theme
 const theme = {

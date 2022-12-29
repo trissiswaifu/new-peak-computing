@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    "gatsby-plugin-emotion",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
