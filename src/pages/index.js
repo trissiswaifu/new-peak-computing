@@ -9,6 +9,7 @@ import mountain from "../assets/mountain.png";
 import { PrimaryButton } from "../components/PrimaryButton";
 import { HomeImgCard } from "../components/HomeImgCard";
 import { Grid } from "../components/Grid";
+import { RiCustomerService2Fill } from "react-icons/ri";
 
 export const Head = () => (
   <>
@@ -127,11 +128,23 @@ const IndexPage = () => {
             margin-bottom: 50px;
           `}
         >
-          <Grid>
+          <div
+            css={css`
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+              grid-gap: 16px;
+              justify-items: center;
+
+              @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            `}
+          >
             <HomeImgCard
               img={manWithLaptop}
               title="Services"
               textButton={"See services"}
+              icon={<RiCustomerService2Fill />}
             >
               Our team of professionals are dedicated to providing top-quality
               service and support to meet the unique needs of our customers.
@@ -152,7 +165,16 @@ const IndexPage = () => {
               img={manWithLaptop}
               title="Samples"
               textButton={"See samples"}
-            ></HomeImgCard>
+            >
+              Here you can see a variety of examples of our work in the
+              technology field. From software development to data management,
+              our team of experts has a proven track record of delivering
+              top-quality solutions to our customers. We are proud to showcase a
+              selection of our past projects as a testament to our commitment to
+              excellence. Take a look at our samples and see for yourself the
+              level of expertise and professionalism that we bring to every
+              project.
+            </HomeImgCard>
             <HomeImgCard
               img={manWithLaptop}
               title="Blog"
@@ -163,7 +185,7 @@ const IndexPage = () => {
               we've got you covered. Join us as we explore the exciting world of
               technology.
             </HomeImgCard>
-          </Grid>
+          </div>
         </section>
       </motion.main>
     </Layout>

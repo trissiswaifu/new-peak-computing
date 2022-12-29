@@ -13,15 +13,22 @@ const cardStyles = css`
   border-radius: 3px;
   padding: 2px;
   /* margin-bottom: 20px; */
-  max-width: 275px;
-  min-width: 275px;
-  min-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 350px;
   @media (min-width: 768px) {
     max-width: 600px;
   }
 `;
 
-export const HomeImgCard = ({ title, children, img, alt, textButton }) => {
+export const HomeImgCard = ({
+  title,
+  children,
+  img,
+  alt,
+  textButton,
+  icon,
+}) => {
   const theme = useTheme();
   return (
     <div css={cardStyles}>
@@ -45,24 +52,45 @@ export const HomeImgCard = ({ title, children, img, alt, textButton }) => {
           /* padding: 1%; */
         `}
       >
-        {title && (
-          <h6
+        <div
+          css={css`
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+          `}
+        >
+          <div
             css={css`
-              /* background-image: url(${img}); */
-              font-size: 18px;
-              margin-bottom: 1%;
-              margin-top: 2%;
-              /* height: 100%; */
-              color: ${theme.colors.grey[900]};
-              font-weight: bold;
+              background-color: ${theme.colors.primary[500]};
+              border-radius: 0.25rem;
+              color: ${theme.colors.grey[50]};
+              padding: 0.2rem 0.75rem 0.2rem 0.75rem;
             `}
           >
-            {title}
-          </h6>
-        )}
+            {icon}
+          </div>
+          {title && (
+            <h6
+              css={css`
+                /* background-image: url(${img}); */
+                font-size: 18px;
+                margin-bottom: 1%;
+                margin-top: 2%;
+                /* height: 100%; */
+                color: ${theme.colors.grey[900]};
+                font-weight: bold;
+              `}
+            >
+              {title}
+            </h6>
+          )}
+        </div>
+
         <p
           css={css`
             color: ${theme.colors.grey[900]};
+            text-align: left;
+            line-height: 1.5;
           `}
         >
           {children}
