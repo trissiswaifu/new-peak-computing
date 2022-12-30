@@ -2,13 +2,10 @@ import * as React from "react";
 import { Layout } from "../components/Layout";
 import { Link } from "gatsby";
 import { motion } from "framer-motion";
-import { useTheme, css } from "@emotion/react";
-import styled from "@emotion/styled";
 import manWithLaptop from "../assets/man-computer.png";
 import mountain from "../assets/mountain.png";
 import { PrimaryButton } from "../components/PrimaryButton";
 import { HomeImgCard } from "../components/HomeImgCard";
-import { Grid } from "../components/Grid";
 import { RiCustomerService2Fill } from "react-icons/ri";
 
 export const Head = () => (
@@ -19,8 +16,6 @@ export const Head = () => (
 );
 
 const IndexPage = () => {
-  const theme = useTheme();
-
   return (
     <Layout>
       <motion.main
@@ -29,39 +24,30 @@ const IndexPage = () => {
         initial={{ x: 500, opacity: 0 }}
       >
         <section
-          css={css`
-            background-color: hsl(0, 10%, 65%);
-            background-image: url(${mountain});
-            padding-top: 40vh;
-            padding-bottom: 40vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-blend-mode: multiply;
-            strong {
-              font-size: calc(9vmin);
-              /* position: relative;
-    top: calc(5.3vmin); */
-              color: #fff;
-              text-shadow: 0 0 1vmin #fff;
-              text-shadow: 0 0 2vmin #fff;
-              text-shadow: 0 0 3vmin #fff;
-              text-shadow: 0 0 4vmin #eee;
-              text-shadow: 0 0 5vmin #ddd;
-            }
-          `}
+          // css={css`
+          //   background-color: hsl(0, 10%, 65%);
+          //   background-image: url(${mountain});
+          //   padding-top: 40vh;
+          //   padding-bottom: 40vh;
+          //   background-repeat: no-repeat;
+          //   background-size: cover;
+          //   background-blend-mode: multiply;
+          // `}
+          className={`h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url(${mountain}})]`}
         >
           <div
             css={css`
-              font-family: "Trebuchet MS", "Lucida Sans Unicode",
+              /* font-family: "Trebuchet MS", "Lucida Sans Unicode",
                 "Lucida Grande", "Lucida Sans", Arial, sans-serif;
               display: flex;
               justify-content: center;
               flex-direction: column;
               align-items: center;
-              gap: 2rem;
+              gap: 2rem; */
             `}
+            className={"gap-8 items-center flex-col justify-center font-mono"}
           >
-            <strong>New Peak Computing</strong>
+            <strong className={"header-styles"}>New Peak Computing</strong>
             <div>
               <Link to="/contact">
                 <PrimaryButton text={"Start your project"} />
@@ -69,48 +55,14 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section
-          css={css`
-            background-color: ${theme.colors?.grey[200]};
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-          `}
-        >
-          <div
-            css={css`
-              padding-top: 0.5rem;
-              padding-left: 0.5rem;
-              padding-bottom: 0.5rem;
-              display: flex;
-              gap: 2rem;
-              align-items: center;
-              justify-content: space-around;
-              flex-direction: column;
-              max-width: 700px;
-              background-color: ${theme.colors?.grey[200]};
-              @media (min-width: 768px) {
-                flex-direction: row;
-              }
-              img {
-                width: 300px;
-                @media (min-width: 425px) {
-                  width: 400px;
-                }
-              }
-            `}
-          >
-            <img src={manWithLaptop} alt="Person using a laptop" />
-            <div
-              css={css`
-                display: flex;
-                flex-direction: column;
-                font-family: "Trebuchet MS", "Lucida Sans Unicode",
-                  "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-                max-width: 30ch;
-                color: ${theme.colors?.grey[900]};
-              `}
-            >
+        <section className={"bg-gray-200 flex justify-center mb-10"}>
+          <div className="pt-2 pl-2 pb-2 flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
+            <img
+              className="w-72 sm:w-96"
+              src={manWithLaptop}
+              alt="Person using a laptop"
+            />
+            <div className="flex-col font-mono max-w-xs text-gray-900">
               <p>
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
@@ -123,22 +75,19 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section
-          css={css`
-            margin-bottom: 50px;
-          `}
-        >
+        <section className="mb-14">
           <div
-            css={css`
-              display: grid;
-              grid-template-columns: repeat(1, 1fr);
-              grid-gap: 16px;
-              justify-items: center;
+            // css={css`
+            //   display: grid;
+            //   grid-template-columns: repeat(1, 1fr);
+            //   grid-gap: 16px;
+            //   justify-items: center;
 
-              @media (min-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-              }
-            `}
+            //   @media (min-width: 768px) {
+            //     grid-template-columns: repeat(2, 1fr);
+            //   }
+            // `}
+            className="grid-cols-1 gap-4 justify-center md:grid-cols-2"
           >
             <HomeImgCard
               img={manWithLaptop}

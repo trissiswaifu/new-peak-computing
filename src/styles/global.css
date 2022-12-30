@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-styles {
+  font-size: calc(9vmin);
+  /* position: relative;
+    top: calc(5.3vmin); */
+  color: #fff;
+  text-shadow: 0 0 1vmin #fff;
+  text-shadow: 0 0 2vmin #fff;
+  text-shadow: 0 0 3vmin #fff;
+  text-shadow: 0 0 4vmin #eee;
+  text-shadow: 0 0 5vmin #ddd;
+}
