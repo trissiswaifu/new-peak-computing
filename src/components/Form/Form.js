@@ -27,10 +27,10 @@ export const Form = () => {
   return (
     <div className=" bg-gray-300 p-2 rounded">
       <form
-        className="bg-cyan-900 pl-2 pb-1 font-mono text-lg user select-none"
+        className="bg-cyan-500 pl-2 pb-1 font-mono text-lg user select-none"
         onSubmit={handleSubmit}
       >
-        <div className="flex-col items-center pb-8 md:flex-row md:justify-center md:gap8 ">
+        <div className="flex flex-col items-center pb-8 md:flex-row md:justify-center md:gap8 ">
           <div>
             <div className="flex-row justify-center p-8">
               <LabelInput
@@ -92,8 +92,8 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row justify-center p-8">
-          <label className="flex-col">
+        <div className="flex flex-col justify-center p-8">
+          <label className="flex flex-col">
             <span>Message</span>
             <textarea
               className="rounded-sm min-h-full resize-none shadow text-lg p-2 text-gray-800 bg-gray-100 focus:outline-none focus:border-cyan-300 focus:shadow-cyan-300 md:min-h-[12ch] w-96"

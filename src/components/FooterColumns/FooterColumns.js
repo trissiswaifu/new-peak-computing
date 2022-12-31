@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 export const FooterColumns = ({ header, links }) => {
   return (
-    <div className="flex-col col-span-6 max-w-fit p-4 lg:col-span-4 mb-12">
+    <div className="flex flex-col col-span-6 max-w-fit p-4 lg:col-span-4 mb-12">
       <h5 className="text-xl text-gray-900">{header}</h5>
       {links.map((link) => (
         <Link

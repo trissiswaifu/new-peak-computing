@@ -9,10 +9,10 @@ import { Divider } from "./Divider";
 export const Footer = () => {
   return (
     <footer className="bg-gray-400 mt-auto">
-      <div className="flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
-        <div className="flex-col items-center justify-start p-3 mr-8">
+      <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
+        <div className="flex flex-col items-center justify-start p-3 mr-8">
           <h5 className="p-2 text-gray-900 text-xl">Stay Posted</h5>
-          <div className=" flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
+          <div className=" flex flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
             <a
               className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
               rel="noreferrer"
@@ -31,7 +31,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="grid-cols-12 items-start max-w-7xl lg:gap-16">
+        <div className="grid grid-cols-12 items-start max-w-7xl lg:gap-16">
           <FooterColumns
             header={"Company"}
             links={[
@@ -60,8 +60,8 @@ export const Footer = () => {
           />
         </div>
       </div>
-      <Divider shade={500} />
-      <div className="flex-col justify-center items-center lg:p-4 lg:mr-20 lg:gap-4 lg:justify-end lg:flex-row">
+      <Divider shade={500} xInset={"auto"} />
+      <div className="flex flex-col justify-center items-center lg:p-4 lg:mr-20 lg:gap-4 lg:justify-end lg:flex-row">
         <NewPeakComputingLogo width={100} />
         <p className="flex mt-12 justify-center text-gray-800">
           © 2022 New Peak Computing. All rights reserved.

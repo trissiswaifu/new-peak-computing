@@ -16,7 +16,7 @@ export const NavMenuSampleDropdown = () => {
           <BsChevronLeft className="text-gray-50" />
         </div>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="grid-cols-2 gap-2 bg-gray-50 rounded p-2">
+      <DropdownMenu.Content className="grid grid-cols-2 gap-2 bg-gray-50 rounded p-2 text-red-900">
         <DropdownMenu.Item
           onSelect={() => {
             handleNavigate("/services/website-design");

@@ -22,30 +22,26 @@ const IndexPage = () => {
         animate={{ x: 0, opacity: 1 }}
         initial={{ x: 500, opacity: 0 }}
       >
-        <section
-          className={`h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url(${mountain}})]`}
-        >
-          <div
-            className={"gap-8 items-center flex-col justify-center font-mono"}
-          >
+        <section className="bg-gray-300 h-screen bg-no-repeat back bg-cover mb-10 bg-blend-multiply bg-[url('../assets/mountain.png')]">
+          <div className="gap-8 items-center flex  flex-col justify-center font-mono">
             <strong className={"header-styles"}>New Peak Computing</strong>
-            {/* <strong>New Peak Computing</strong> */}
-
             <div>
               <Link to="/contact">
-                <button>Start your project</button>
+                <button className="bg-cyan-500 rounded-sm text-gray-50">
+                  Start your project
+                </button>
               </Link>
             </div>
           </div>
         </section>
         <section className={"bg-gray-200 flex justify-center mb-10"}>
-          <div className="pt-2 pl-2 pb-2 flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
+          <div className="pt-2 pl-2 pb-2 flex flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
             <img
               className="w-72 sm:w-96"
               src={manWithLaptop}
               alt="Person using a laptop"
             />
-            <div className="flex-col font-mono max-w-xs text-gray-900">
+            <div className="flex flex-col font-mono max-w-xs text-gray-900">
               <p>
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
@@ -59,24 +55,12 @@ const IndexPage = () => {
           </div>
         </section>
         <section className="mb-14">
-          <div
-            // css={css`
-            //   display: grid;
-            //   grid-template-columns: repeat(1, 1fr);
-            //   grid-gap: 16px;
-            //   justify-items: center;
-
-            //   @media (min-width: 768px) {
-            //     grid-template-columns: repeat(2, 1fr);
-            //   }
-            // `}
-            className="grid-cols-1 gap-4 justify-center md:grid-cols-2"
-          >
+          <div className="grid grid-cols-1 gap-4 justify-center md:grid-cols-2">
             <HomeImgCard
               img={manWithLaptop}
               title="Services"
               textButton={"See services"}
-              icon={<RiCustomerService2Fill />}
+              icon={<RiCustomerService2Fill className="text-gray-900" />}
             >
               Our team of professionals are dedicated to providing top-quality
               service and support to meet the unique needs of our customers.

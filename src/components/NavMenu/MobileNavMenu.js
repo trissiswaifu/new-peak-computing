@@ -18,7 +18,7 @@ export const MobileNavMenu = () => {
   return (
     <>
       <div
-        className="flex-col justify-center items-center gap-2"
+        className="flex flex-col justify-center items-center gap-2"
         onClick={handleClick}
       >
         <motion.span
@@ -56,7 +56,7 @@ export const MobileNavMenu = () => {
             animate={{ width: 300 }}
             exit={{ width: 0 }}
             transition={{ duration: 0.35 }}
-            className="absolute flex-col bg-gray-300 text-cyan-900 p-2 right-0 top-full gap-3 z-50"
+            className="absolute flex flex-col bg-gray-300 text-cyan-900 p-2 right-0 top-full gap-3 z-50"
           >
             <Link
               className="text-gray-50 decoration-0 font-mono text-base opacity-[150%] xl:text-lg hover:opacity-80"

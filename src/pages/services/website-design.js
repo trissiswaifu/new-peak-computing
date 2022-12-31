@@ -10,7 +10,7 @@ const Websitedesign = () => {
     <body>
       <Layout>
         <ServiceLayout>
-          <div className="flex-col items-center lg:flex-row lg:gap-4">
+          <div className="flex flex-col items-center lg:flex-row lg:gap-4">
             <img className="rounded max-w-md" src={closeUpWireframes} />
             <ServiceExplantion
               header={"Lorem ipsum dolor"}
