@@ -1,38 +1,17 @@
 import React from "react";
 import { Layout } from "../../components/Layout";
-import { NewPeakComputingLogo } from "../../components/NewPeakComputingLogo";
 import closeUpWireframes from "../../assets/close-up-wireframes.webp";
-import { useTheme, css } from "@emotion/react";
 import { ServiceLayout } from "../../layouts";
 import { ServicesOrderList } from "../../components/ServicesOrderList";
 import { ServiceExplantion } from "../../components/ServiceExplantion";
 
 const Websitedesign = () => {
-  const theme = useTheme();
   return (
     <body>
       <Layout>
         <ServiceLayout>
-          {/* <NewPeakComputingLogo width={"100%"} /> */}
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-
-              @media (min-width: 1024px) {
-                flex-direction: row;
-                gap: 2rem;
-              }
-            `}
-          >
-            <img
-              css={css`
-                border-radius: 0.25rem;
-                max-width: 500px;
-              `}
-              src={closeUpWireframes}
-            />
+          <div className="flex-col items-center lg:flex-row lg:gap-4">
+            <img className="rounded max-w-md" src={closeUpWireframes} />
             <ServiceExplantion
               header={"Lorem ipsum dolor"}
               para1={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

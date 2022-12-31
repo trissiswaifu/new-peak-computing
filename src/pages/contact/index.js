@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import React from "react";
 import { Form } from "../../components/Form";
 import { Layout } from "../../components/Layout";
@@ -10,43 +9,21 @@ import {
   newPeakPhoneNumber,
 } from "../../Constants/contactInfo";
 //TODO add toast alert on successful  submission
-const ContactUsSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  flex-direction: column;
-  @media (min-width: 1024px) {
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 5rem;
-  }
-`;
-const ContactInfoDiv = styled.div`
-  background-color: ${(props) => props.theme.colors.primary[900]};
-  padding: 1rem;
-  h3 {
-    color: ${(props) => props.theme.colors.grey[50]};
-  }
-`;
 
 const Index = () => {
   return (
     <Layout>
       <motion.main>
-        <ContactUsSection>
+        <section className="flex-col justify-center items-center gap-20 pt-8 pr-8 pl-8 lg:flex-row-reverse lg:justify-center lg:gap-20">
           <Form />
-          <ContactInfoDiv>
-            <h3>Contact Us</h3>
+          <div className="bg-cyan=900 p-4">
+            <h3 className="text-gray-50">Contact Us</h3>
             <ContactInfo
               phoneNumber={newPeakPhoneNumber}
               address={newPeakAddress}
             />
-          </ContactInfoDiv>
-        </ContactUsSection>
+          </div>
+        </section>
       </motion.main>
     </Layout>
   );

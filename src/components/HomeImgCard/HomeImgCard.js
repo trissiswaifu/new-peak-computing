@@ -9,7 +9,6 @@ export const HomeImgCard = ({
   textButton,
   icon,
 }) => {
-  const theme = useTheme();
   return (
     <div className="bg-gray-50 relative flex-col shadow-md rounded p-6 max-w-xs md:max-w-xl">
       {/* <Overlay> */}
@@ -35,7 +34,6 @@ export const HomeImgCard = ({
         </div>
 
         <p className="text-gray-900 text-left text-base">{children}</p>
-        {/* <PrimaryButton text={textButton} fontWeight={fontWeightButton} /> */}
         <motion.button
           whileTap={{ scale: 0.98 }}
           className="bg-gray-700 text-gray-50 p-4 rounded absolute bottom-2 left-2 right-2 font-semibold hover:shadow"

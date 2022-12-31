@@ -1,5 +1,3 @@
-import styled from "@emotion/styled";
-import { css, useTheme } from "@emotion/react";
 import React from "react";
 import { newPeakFacebook, newPeakTwitter } from "../Constants/urls";
 import { FacebookLogo } from "./FacebookLogo";
@@ -8,90 +6,32 @@ import { NewPeakComputingLogo } from "./NewPeakComputingLogo";
 import { TwitterLogo } from "./TwitterLogo";
 import { Divider } from "./Divider";
 
-const FooterStyled = styled.footer`
-  background-color: ${(props) => props.theme.colors.grey[400]};
-  margin-top: auto;
-  margin-top: 10px;
-`;
-
-const LogosWrapper = styled.footer`
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  gap: 1rem;
-  max-width: fit-content;
-  border-radius: 0.25rem;
-  margin: 0.5rem;
-  margin-bottom: 3rem;
-
-  a {
-    background-color: ${(props) => props.theme.colors.grey[200]};
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0px 2px 0.25rem ${(props) => props.theme.colors.grey[700]};
-
-    cursor: pointer;
-    &:hover {
-      opacity: 0.9;
-      box-shadow: none;
-      transition: opacity 200ms ease-in-out, box-shadow 200ms ease-in-out;
-    }
-  }
-`;
-
 export const Footer = () => {
-  const theme = useTheme();
-
   return (
-    <FooterStyled>
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          @media (min-width: 1024px) {
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-          }
-        `}
-      >
-        <div
-          css={css`
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 0.75rem;
-            margin-right: 2rem;
-            h5 {
-              padding: 0.5rem;
-              color: ${theme.colors.grey[900]};
-              font-size: 1.25rem;
-            }
-          `}
-        >
-          <h5>Stay Posted</h5>
-          <LogosWrapper>
-            <a rel="noreferrer" target="_blank" href={newPeakFacebook}>
+    <footer className="bg-gray-400 mt-auto">
+      <div className="flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
+        <div className="flex-col items-center justify-start p-3 mr-8">
+          <h5 className="p-2 text-gray-900 text-xl">Stay Posted</h5>
+          <div className=" flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
+            <a
+              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
+              rel="noreferrer"
+              target="_blank"
+              href={newPeakFacebook}
+            >
               <FacebookLogo fontSize={20} />
             </a>
-            <a rel="noreferrer" target="_blank" href={newPeakTwitter}>
+            <a
+              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
+              rel="noreferrer"
+              target="_blank"
+              href={newPeakTwitter}
+            >
               <TwitterLogo fontSize={20} />
             </a>
-          </LogosWrapper>
+          </div>
         </div>
-        <div
-          css={css`
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            align-items: flex-start;
-            max-width: 1200px;
-            @media (min-width: 1024px) {
-              gap: 4.5rem;
-            }
-          `}
-        >
+        <div className="grid-cols-12 items-start max-w-7xl lg:gap-16">
           <FooterColumns
             header={"Company"}
             links={[
@@ -121,34 +61,12 @@ export const Footer = () => {
         </div>
       </div>
       <Divider shade={500} />
-      <div
-        css={css`
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-          @media (min-width: 1024px) {
-            padding: 1rem;
-            margin-right: 5rem;
-            gap: 1rem;
-            justify-content: flex-end;
-            flex-direction: row;
-          }
-        `}
-      >
+      <div className="flex-col justify-center items-center lg:p-4 lg:mr-20 lg:gap-4 lg:justify-end lg:flex-row">
         <NewPeakComputingLogo width={100} />
-        <p
-          css={css`
-            display: flex;
-            margin-top: 3rem;
-
-            justify-content: center;
-            color: ${theme.colors.grey[800]};
-          `}
-        >
+        <p className="flex mt-12 justify-center text-gray-800">
           © 2022 New Peak Computing. All rights reserved.
         </p>
       </div>
-    </FooterStyled>
+    </footer>
   );
 };

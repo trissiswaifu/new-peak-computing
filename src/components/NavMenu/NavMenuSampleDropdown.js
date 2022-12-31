@@ -2,10 +2,8 @@ import React from "react";
 import { Link, navigate } from "gatsby";
 import { BsChevronLeft } from "react-icons/bs";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { useTheme, css } from "@emotion/react";
 //TODO center menu links
 export const NavMenuSampleDropdown = () => {
-  const theme = useTheme();
   const handleNavigate = (url) => {
     navigate(url);
   };
@@ -13,34 +11,12 @@ export const NavMenuSampleDropdown = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
-        <div
-          css={css`
-            display: flex;
-            align-items: center;
-            background-color: inherit;
-            gap: 0.25rem;
-            @media (min-width: 1200px) {
-              font-size: 1.125rem;
-            }
-          `}
-        >
+        <div className="flex items-center bg-inherit gap-1 xl:text-lg">
           <span>Samples</span>
-          <BsChevronLeft color={theme.colors.grey[50]} />
+          <BsChevronLeft className="text-gray-50" />
         </div>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content
-        css={css`
-          display: grid;
-          gap: 0.5rem;
-          grid-column: 2;
-          background-color: ${theme.colors.grey[50]};
-          border-radius: 0.25rem;
-          padding: 0.5rem;
-          div {
-            color: ${theme.colors.grey[900]};
-          }
-        `}
-      >
+      <DropdownMenu.Content className="grid-cols-2 gap-2 bg-gray-50 rounded p-2">
         <DropdownMenu.Item
           onSelect={() => {
             handleNavigate("/services/website-design");

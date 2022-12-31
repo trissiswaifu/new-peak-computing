@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import { motion } from "framer-motion";
 import manWithLaptop from "../assets/man-computer.png";
 import mountain from "../assets/mountain.png";
-import { PrimaryButton } from "../components/PrimaryButton";
 import { HomeImgCard } from "../components/HomeImgCard";
 import { RiCustomerService2Fill } from "react-icons/ri";
 
@@ -24,33 +23,17 @@ const IndexPage = () => {
         initial={{ x: 500, opacity: 0 }}
       >
         <section
-          // css={css`
-          //   background-color: hsl(0, 10%, 65%);
-          //   background-image: url(${mountain});
-          //   padding-top: 40vh;
-          //   padding-bottom: 40vh;
-          //   background-repeat: no-repeat;
-          //   background-size: cover;
-          //   background-blend-mode: multiply;
-          // `}
           className={`h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url(${mountain}})]`}
         >
           <div
-            css={css`
-              /* font-family: "Trebuchet MS", "Lucida Sans Unicode",
-                "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-              align-items: center;
-              gap: 2rem; */
-            `}
             className={"gap-8 items-center flex-col justify-center font-mono"}
           >
             <strong className={"header-styles"}>New Peak Computing</strong>
+            {/* <strong>New Peak Computing</strong> */}
+
             <div>
               <Link to="/contact">
-                <PrimaryButton text={"Start your project"} />
+                <button>Start your project</button>
               </Link>
             </div>
           </div>

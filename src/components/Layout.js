@@ -1,47 +1,13 @@
-import { css, Global, ThemeProvider } from "@emotion/react";
 import React from "react";
 import { Footer } from "./Footer";
 import { NavMenu } from "./NavMenu";
-import "./src/styles/global.css";
+import "../../src/styles/global.css";
 
-//cyan theme
-const theme = {
-  colors: {
-    primary: {
-      50: "#E0F7FA",
-      100: "#B2EBF2",
-      200: "#80DEEA",
-      300: "#4DD0E1",
-      400: "#26C6DA",
-      500: "#00BCD4",
-      600: "#00ACC1",
-      700: "#0097A7",
-      800: "#00838F",
-      900: "#006064",
-      A100: "#84FFFF",
-      A200: "#18FFFF",
-      A400: "#00E5FF",
-      A700: "#00B8D4",
-    },
-    grey: {
-      50: "#FAFAFA",
-      100: "#F5F5F5",
-      200: "#EEEEEE",
-      300: "#E0E0E0",
-      400: "#BDBDBD",
-      500: "#9E9E9E",
-      600: "#757575",
-      700: "#616161",
-      800: "#424242",
-      900: "#212121",
-    },
-  },
-};
-
+//TODO change from css to tailwind
 export const Layout = ({ children }) => {
   return (
     <>
-      <Global
+      {/* <Global
         styles={css`
           body {
             font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -81,12 +47,10 @@ export const Layout = ({ children }) => {
             cursor: pointer;
           }
         `}
-      />
-      <ThemeProvider theme={theme}>
-        <NavMenu />
-        {children}
-        <Footer />
-      </ThemeProvider>
+      /> */}
+      <NavMenu />
+      {children}
+      <Footer />
     </>
   );
 };

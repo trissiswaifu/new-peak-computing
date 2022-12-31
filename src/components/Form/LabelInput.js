@@ -10,9 +10,10 @@ export const LabelInput = ({
 }) => {
   return (
     <>
-      <label>
+      <label className="flex-col">
         <span>{labelText}</span>
         <input
+          className="text-gray-800 text-lg p-2 border-cyan=300 rounded:sm bg-gray-100 focus:shadow-cyan-300 focus:outline-none focus:border-cyan-300"
           type={type}
           name={name}
           value={value}

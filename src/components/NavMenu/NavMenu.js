@@ -1,4 +1,3 @@
-import { css, useTheme } from "@emotion/react";
 import { Link, navigate } from "gatsby";
 import React from "react";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
@@ -7,41 +6,17 @@ import { DesktopNavMenu } from "./DesktopNavMenu";
 import { MobileNavMenu } from "./MobileNavMenu";
 
 export const NavMenu = () => {
-  const theme = useTheme();
   const isMobile = useMediaQuery("(max-width: 1024px)");
   return (
     <>
-      <div
-        css={css`
-          position: sticky;
-          top: 0;
-          padding: 0rem 1rem;
-          /* width: 100%; */
-          /* z-index: 2; */
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          /* background-color: ${theme.colors.grey[200]}; */
-          background-color: ${theme.colors.primary[900]};
-          /* background: transparent; */
-          border-bottom: 1px solid ${theme.colors.grey[50]};
-          z-index: 9999;
-          img {
-            padding-left: 0rem;
-          }
-        `}
-      >
+      <div className="sticky top-0 pr-2 flex justify-between items-center bg-cyan-900 border-b-2 border-gray-50 z-50">
         <div
-          css={css`
-            &:hover {
-              cursor: pointer;
-            }
-          `}
           onClick={() => {
             navigate("/");
           }}
+          className="hover:cursor-pointer"
         >
-          <NewPeakComputingLogo width={75} />
+          <NewPeakComputingLogo className="pl-0" width={75} />
         </div>
         {isMobile ? <MobileNavMenu /> : <DesktopNavMenu />}
       </div>
