@@ -25,12 +25,12 @@ export const Form = () => {
   };
 
   return (
-    <div className=" bg-gray-300 p-2 rounded">
+    <div className=" bg-gray-500 p-2 rounded-sm max-w-screen-sm">
       <form
-        className="bg-cyan-500 pl-2 pb-1 font-mono text-lg user select-none"
+        className="pl-2 pb-1 text-lg user select-none"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col items-center pb-8 md:flex-row md:justify-center md:gap8 ">
+        <div className="flex flex-col items-center pb-8 md:flex-row md:justify-center md:gap8">
           <div>
             <div className="flex-row justify-center p-8">
               <LabelInput
@@ -56,7 +56,7 @@ export const Form = () => {
             </div>
           </div>
         </div>
-        <div className="flex-row justify-center p-8">
+        <div className="flex flex-row justify-center p-8">
           <LabelInput
             labelText="Company Name"
             type={"text"}
@@ -65,7 +65,7 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row justify-center p-8">
+        <div className="flex flex-row justify-center p-8">
           <LabelInput
             labelText="Phone Number"
             type={"tel"}
@@ -74,7 +74,7 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row justify-center p-8">
+        <div className="flex flex-row justify-center p-8">
           <LabelInput
             labelText="Email Address"
             type={"email"}
@@ -83,7 +83,7 @@ export const Form = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row justify-center p-8">
+        <div className="flex flex-row justify-center p-8">
           <LabelInput
             labelText="Subject"
             type={"text"}
@@ -106,7 +106,7 @@ export const Form = () => {
         </div>
         <div>
           <input
-            className="font-mono text-base font-semibold w-1/4 min-w-[100px] rounded-sm p-3 border-none shadow-none bg-cyan-700 text-gra-50 active:opacity-90 hover:opacity-90 hover:cursor-pointer"
+            className="text-base font-semibold w-1/4 min-w-[100px] rounded-sm p-3 border-none shadow-none bg-cyan-700 text-gra-50 active:opacity-90 hover:opacity-90 hover:cursor-pointer"
             type="submit"
           />
         </div>
