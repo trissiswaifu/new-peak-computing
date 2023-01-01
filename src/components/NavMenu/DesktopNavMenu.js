@@ -9,7 +9,7 @@ export const DesktopNavMenu = () => {
   return (
     <div className="flex gap-4 pr-6 font-bold text-gray-50">
       <Link
-        className="text-gray-50 decoration-0 font-mono text-base opacity-[150%] xl:text-lg hover:opacity-80"
+        className="text-gray-50 decoration-0 text-base opacity-[150%] xl:text-lg hover:opacity-80"
         to="/"
       >
         Home

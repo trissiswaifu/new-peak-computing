@@ -13,7 +13,11 @@ import {
 const Index = () => {
   return (
     <Layout>
-      <motion.main>
+      <motion.main
+        transition={{ type: "tween" }}
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: 500, opacity: 0 }}
+      >
         <section className="flex flex-col justify-center items-center gap-20 pt-8 pr-8 pl-8 lg:flex-row-reverse lg:justify-center lg:gap-20">
           <Form />
           <div className="bg-cyan=900 p-4">

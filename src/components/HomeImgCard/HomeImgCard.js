@@ -27,7 +27,7 @@ export const HomeImgCard = ({
             {icon}
           </div>
           {title && (
-            <h6 className="text-lg text-gray-900 font-bold">{title}</h6>
+            <h6 className="text-lg text-gray-500 font-bold">{title}</h6>
           )}
         </div>
 

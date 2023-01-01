@@ -23,17 +23,17 @@ export const MobileNavMenu = () => {
       >
         <motion.span
           initial={{ x: 0, opacity: 1 }}
-          animate={isClicked ? { rotate: 45, y: 9 } : { x: 0, opacity: 1 }}
+          animate={isClicked ? { rotate: 45, y: 11 } : { x: 0, opacity: 1 }}
           //mountain close button
           // animate={
           //   isClicked ? { rotate: -60, y: 6, x: -7 } : { x: 0, opacity: 1 }
           // }
 
-          className="h-0.5 w-7 bg-gray-50"
+          className="h-0.5 w-8 bg-gray-50"
         />
         <motion.span
           initial={{ x: 0, opacity: 1 }}
-          className="h-0.5 w-7 bg-gray-50"
+          className="h-0.5 w-8 bg-gray-50"
           animate={isClicked ? { x: 0, opacity: 0 } : { x: 0, opacity: 1 }}
           transition={{ duration: 0.15 }}
           //mountain close button
@@ -47,7 +47,7 @@ export const MobileNavMenu = () => {
           //mountain close button
           // animate={isClicked ? { y: 0 } : { x: 0, opacity: 1 }}
 
-          className="h-0.5 w-7 bg-gray-50"
+          className="h-0.5 w-8 bg-gray-50"
         />
       </div>
       <AnimatePresence>
@@ -59,7 +59,7 @@ export const MobileNavMenu = () => {
             className="absolute flex flex-col bg-gray-300 text-cyan-900 p-2 right-0 top-full gap-3 z-50"
           >
             <Link
-              className="text-gray-50 decoration-0 font-mono text-base opacity-[150%] xl:text-lg hover:opacity-80"
+              className="text-gray-50 decoration-0 text-base opacity-[150%] xl:text-lg hover:opacity-80"
               to="/"
             >
               Home
