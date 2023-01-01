@@ -22,12 +22,12 @@ const IndexPage = () => {
         animate={{ x: 0, opacity: 1 }}
         initial={{ x: 500, opacity: 0 }}
       >
-        <section className="bg-gray-300 h-screen bg-no-repeat back bg-cover mb-10 bg-blend-multiply bg-[url('../assets/mountain.png')]">
-          <div className="gap-8 items-center flex  flex-col justify-center font-mono">
+        <section className="pt-60 bg-gray-300 h-screen bg-no-repeat back bg-cover mb-10 bg-blend-multiply bg-[url('../assets/mountain.png')]">
+          <div className="gap-8 items-center flex  flex-col justify-center">
             <strong className={"header-styles"}>New Peak Computing</strong>
             <div>
               <Link to="/contact">
-                <button className="bg-cyan-500 rounded-sm text-gray-50">
+                <button className="bg-cyan-500 rounded-sm text-gray-50 p-2">
                   Start your project
                 </button>
               </Link>
@@ -41,7 +41,7 @@ const IndexPage = () => {
               src={manWithLaptop}
               alt="Person using a laptop"
             />
-            <div className="flex flex-col font-mono max-w-xs text-gray-900">
+            <div className="flex flex-col max-w-xs text-gray-900">
               <p>
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
