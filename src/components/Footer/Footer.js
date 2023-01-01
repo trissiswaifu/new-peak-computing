@@ -1,17 +1,17 @@
 import React from "react";
-import { newPeakFacebook, newPeakTwitter } from "../Constants/urls";
-import { FacebookLogo } from "./FacebookLogo";
-import { FooterColumns } from "./FooterColumns";
-import { NewPeakComputingLogo } from "./NewPeakComputingLogo";
-import { TwitterLogo } from "./TwitterLogo";
-import { Divider } from "./Divider";
+import { newPeakFacebook, newPeakTwitter } from "../../Constants/urls";
+import { FacebookLogo } from "../FacebookLogo";
+import { FooterColumns } from "../FooterColumns";
+import { NewPeakComputingLogo } from "../NewPeakComputingLogo";
+import { TwitterLogo } from "../TwitterLogo";
+import { Divider } from "../Divider";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-400 mt-auto">
+    <footer className="bg-gray-300 mt-auto">
       <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
         <div className="flex flex-col items-center justify-start p-3 mr-8">
-          <h5 className="p-2 text-gray-900 text-xl">Stay Posted</h5>
+          <h5 className="p-2 text-gray-700 text-xl">Stay Posted</h5>
           <div className=" flex flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
             <a
               className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
