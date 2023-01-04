@@ -9,6 +9,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { IoIosPaper } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import * as Tabs from "@radix-ui/react-tabs";
+import { HomePageServiceListItem } from "../components/HomePageServiceListItem";
 
 export const Head = () => (
   <>
@@ -25,12 +26,12 @@ const IndexPage = () => {
         animate={{ x: 0, opacity: 1 }}
         initial={{ x: 500, opacity: 0 }}
       >
-        <section className="pt-60 bg-gray-300 h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url('../assets/mountain.png')]">
+        <section className="pt-60 bg-gray-400 h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url('../assets/mountain.png')]">
           <div className="gap-8 items-center flex  flex-col justify-center">
             <strong className={"header-styles"}>New Peak Computing</strong>
             <div>
               <Link to="/contact">
-                <button className="bg-cyan-500 rounded-sm text-gray-50 p-2">
+                <button className="bg-cyan-500 rounded-sm text-gray-200 hover:text-gray-50 shadow-sm hover:shadow-none hover:bg-cyan-600  p-2">
                   Start your project
                 </button>
               </Link>
@@ -38,13 +39,14 @@ const IndexPage = () => {
           </div>
         </section>
         <section className={"bg-gray-200 flex justify-center pb-10 pt-5"}>
-          <div className="pt-2  pb-2 flex flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
+          <div className="pt-2  pb-2 flex flex-col gap-8 items-center justify-center  bg-gray-200 lg:flex-row lg:items-start">
             <img
               // className="w-72 sm:w-96"
               src={manWithLaptop}
               alt="Person using a laptop"
+              className="max-w-full lg:max-w-lg lg:p-2 rounded:sm"
             />
-            <div className="flex flex-col  gap-6">
+            <div className="flex flex-col p-5  gap-6">
               <p className="text-base text-gray-700">
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
@@ -53,9 +55,28 @@ const IndexPage = () => {
               <p className="text-base text-gray-700">
                 With a team of experienced and skilled professionals, we have
                 established ourselves as a leader in the industry. Our services
-                include [list of services], all designed to help our clients
-                stay competitive and efficient in today's fast-paced digital
-                world. We are constantly researching and implementing the latest
+                include{" "}
+                <ul className="flex m-auto flex-col  gap-4 bg-gray-100 max-w-lg rounded-sm border-red-600 border-t-4 p-4 my-8">
+                  <HomePageServiceListItem
+                    service={"Website Design, Development, & Hosting"}
+                  />
+                  <HomePageServiceListItem
+                    service={"Email Hosting & Management"}
+                  />
+                  <HomePageServiceListItem service={"IT Service"} />
+                  <HomePageServiceListItem
+                    service={"Small Business Applications"}
+                  />
+                  <HomePageServiceListItem
+                    service={"Business to Business Software"}
+                  />
+                  <HomePageServiceListItem service={"Automation Services"} />
+                </ul>
+                all designed to help our clients stay competitive and efficient
+                in today's fast-paced digital world.
+              </p>
+              <p className="text-base text-gray-700">
+                We are constantly researching and implementing the latest
                 technologies to ensure that our solutions are always at the
                 forefront of the industry. In addition to our top-notch
                 technology services, we are also dedicated to excellent customer
