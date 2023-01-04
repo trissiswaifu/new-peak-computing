@@ -37,35 +37,46 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className={"bg-gray-200 flex justify-center pb-10 pt-10"}>
-          <div className="pt-2 pl-2 pb-2 flex flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
+        <section className={"bg-gray-200 flex justify-center pb-10 pt-5"}>
+          <div className="pt-2  pb-2 flex flex-col gap-8 items-center justify-center max-w-2xl bg-gray-200 md:flex-row">
             <img
-              className="w-72 sm:w-96"
+              // className="w-72 sm:w-96"
               src={manWithLaptop}
               alt="Person using a laptop"
             />
-            <div className="flex flex-col max-w-xs text-gray-900">
-              <p>
+            <div className="flex flex-col  gap-6">
+              <p className="text-base text-gray-700">
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
                 industries.
               </p>
-              <p>
-                We provide Web development services to small business, startups
-                and enterprises across a range of industries.
+              <p className="text-base text-gray-700">
+                With a team of experienced and skilled professionals, we have
+                established ourselves as a leader in the industry. Our services
+                include [list of services], all designed to help our clients
+                stay competitive and efficient in today's fast-paced digital
+                world. We are constantly researching and implementing the latest
+                technologies to ensure that our solutions are always at the
+                forefront of the industry. In addition to our top-notch
+                technology services, we are also dedicated to excellent customer
+                service. We work closely with our clients to understand their
+                specific needs and provide personalized solutions.
               </p>
             </div>
           </div>
         </section>
-        <section className="pb-20 bg-gray-100 ">
-          <Tabs.Root className="min-h-[500px]" defaultValue="servicesTab">
+        <section className=" bg-gray-200">
+          <Tabs.Root
+            className="flex flex-col lg:flex-row justify-center items-baseline lg:gap-8 lg:p-4  border-gray-300 border-t-2  lg:border-t-0"
+            defaultValue="servicesTab"
+          >
             <Tabs.List
-              className="flex gap-1 p-1"
-              aria-label="Overview of New Peak"
+              className="flex gap-1 p-1 sm:pl-5 md:justify-center lg:flex-col"
+              aria-label="Overview tabs of New Peak"
             >
               <Tabs.Trigger
                 value="servicesTab"
-                className=" text-gray-800 flex flex-col gap-3 font-medium  items-start p-2 rounded-sm hover:bg-red-200"
+                className=" text-gray-800 flex flex-col lg:flex-row gap-3 font-medium  items-start p-2 rounded-sm hover:bg-red-200 focus:bg-red-200"
               >
                 <div className="text-red-200 bg-red-600   rounded:sm pt-1 pr-3 pb-1 pl-3">
                   <RiCustomerService2Fill />
@@ -74,7 +85,7 @@ const IndexPage = () => {
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="contactTab"
-                className=" text-gray-800 flex flex-col gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200"
+                className=" text-gray-800 flex flex-col lg:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200 focus:bg-red-200"
               >
                 <div className="text-red-200 bg-red-600  rounded:sm pt-1 pr-3 pb-1 pl-3">
                   <AiOutlineMail />
@@ -83,7 +94,7 @@ const IndexPage = () => {
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="samplesTab"
-                className=" text-gray-800 flex flex-col gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200"
+                className=" text-gray-800 flex flex-col lg:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200 focus:bg-red-200"
               >
                 <div className="text-red-200 bg-red-600  rounded:sm pt-1 pr-3 pb-1 pl-3">
                   <IoIosPaper />
@@ -92,7 +103,7 @@ const IndexPage = () => {
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="blogTab"
-                className="  text-gray-800 flex flex-col gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200"
+                className="  text-gray-800 flex flex-col lg:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-red-200 focus:bg-red-200"
               >
                 <div className="text-red-200 bg-red-600  rounded:sm pt-1 pr-3 pb-1 pl-3">
                   <CgWebsite />
