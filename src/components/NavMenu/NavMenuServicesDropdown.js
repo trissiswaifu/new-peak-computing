@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, navigate } from "gatsby";
+//TODO switch to heroicons
 import { BsChevronLeft } from "react-icons/bs";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 export const NavMenuServicesDropdown = () => {
   const handleNavigate = (url) => {
@@ -9,57 +10,63 @@ export const NavMenuServicesDropdown = () => {
   };
 
   return (
-    <DropdownMenu.Root>
-      <DropdownMenu.Trigger>
-        <div className="flex items-center bg-inherit gap-1 xl:text-lg">
-          <span>Services</span>
-          <BsChevronLeft />
-        </div>
-      </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="grid grid-cols-2 gap-2 bg-gray-50 rounded p-2">
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/website-design");
-          }}
-        >
-          Website Design, Building And Hosting
-        </DropdownMenu.Item>
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/email-hosting");
-          }}
-        >
-          Email Hosting & Management
-        </DropdownMenu.Item>
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/it-services");
-          }}
-        >
-          IT Services
-        </DropdownMenu.Item>
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/small-businessapps");
-          }}
-        >
-          Small Business Applications
-        </DropdownMenu.Item>
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/business2business");
-          }}
-        >
-          Business to Business Software
-        </DropdownMenu.Item>
-        <DropdownMenu.Item
-          onSelect={() => {
-            handleNavigate("/services/automation-service");
-          }}
-        >
-          Automation Services
-        </DropdownMenu.Item>
-      </DropdownMenu.Content>
-    </DropdownMenu.Root>
+    <NavigationMenu.Root className="text-base xl:text-lg">
+      <NavigationMenu.Trigger className="active:text-cyan-500 flex items-center gap-1">
+        Services
+        <BsChevronLeft aria-hidden />
+      </NavigationMenu.Trigger>
+      <NavigationMenu.Portal>
+        <NavigationMenu.Content className="container max-w-xs grid grid-cols-1 gap-2 bg-gray-50 rounded:sm p-2">
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/website-design");
+            }}
+          >
+            <div>
+              <h6>Website Design, Building And Hosting</h6>
+              <p>
+                create and host professional websites tailored to the client's
+                needs and goals.
+              </p>
+            </div>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/email-hosting");
+            }}
+          >
+            Email Hosting & Management
+          </NavigationMenu.Item>
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/it-services");
+            }}
+          >
+            IT Services
+          </NavigationMenu.Item>
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/small-businessapps");
+            }}
+          >
+            Small Business Applications
+          </NavigationMenu.Item>
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/business2business");
+            }}
+          >
+            Business to Business Software
+          </NavigationMenu.Item>
+          <NavigationMenu.Item
+            onSelect={() => {
+              handleNavigate("/services/automation-service");
+            }}
+          >
+            Automation Services
+          </NavigationMenu.Item>
+        </NavigationMenu.Content>
+      </NavigationMenu.Portal>
+    </NavigationMenu.Root>
   );
 };

@@ -53,15 +53,12 @@ export const MobileNavMenu = () => {
       <AnimatePresence>
         {isClicked && (
           <motion.div
-            animate={{ width: 300 }}
+            animate={{ width: "100%" }}
             exit={{ width: 0 }}
             transition={{ duration: 0.35 }}
-            className="absolute flex flex-col bg-gray-300 text-cyan-900 p-2 right-0 top-full gap-3 z-50"
+            className="text-base absolute flex flex-col bg-gray-50 rounded-sm text-gray-700  p-2 right-0 top-full gap-3 z-50"
           >
-            <Link
-              className="text-gray-50 decoration-0 text-base opacity-[150%] xl:text-lg hover:opacity-80"
-              to="/"
-            >
+            <Link className="active:text-cyan-500" to="/">
               Home
             </Link>
             <NavMenuServicesDropdown />
