@@ -37,7 +37,7 @@ export const NavMenu = () => {
           onClick={() => {
             navigate("/");
           }}
-          className="hover:cursor-pointer"
+          className="hover:cursor-pointer ml-1"
         >
           <NewPeakComputingLogo className="pl-0" width={75} />
         </div>
@@ -86,7 +86,7 @@ export const NavMenu = () => {
                   animate={{ width: "100%" }}
                   exit={{ width: 0 }}
                   transition={{ duration: 0.35 }}
-                  className="absolute bg-gray-50 rounded:sm p-2 right-0 top-full gap-3 z-50"
+                  className="absolute bg-gray-50 rounded:sm p-2 right-0 top-full max-w-md"
                 >
                   <NavList />
                 </motion.div>
