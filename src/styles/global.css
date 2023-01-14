@@ -25,22 +25,23 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
 
-::-webkit-scrollbar {
-  width: 7px;
-}
+  ::-webkit-scrollbar-track {
+    background: #fecaca;
+  }
 
-::-webkit-scrollbar-track {
-  background: hsl(0, 0%, 25%);
-}
+  ::-webkit-scrollbar-thumb {
+    background: #0891b2;
+    border-radius: 0.25rem;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: hsl(195, 97%, 24%);
-  border-radius: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 button {
