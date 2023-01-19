@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { api } from "../../Config/api";
 import { LabelInput } from "./LabelInput";
-//TODO animation styles on submit button
+
+//TODO have an autofill for when user comes from a service link and fills out the subject for what page they were from
 
 export const Form = () => {
   const [inputs, setInputs] = useState({});
@@ -27,7 +28,7 @@ export const Form = () => {
   };
 
   return (
-    <div className=" border-y-4 border-red-300 bg-gray-50 p-6 m-5 rounded-sm max-w-xs md:max-w-2xl">
+    <div className=" border-y-4 border-red-300 bg-gray-50 p-6 m-5 rounded-sm max-w-xs sm:max-w-sm md:max-w-2xl">
       <form
         className="pl-2 pb-1 text-lg user select-none"
         onSubmit={handleSubmit}
@@ -96,13 +97,14 @@ export const Form = () => {
         </div>
         <div className="flex flex-col justify-center p-4">
           <label className="text-start flex flex-col">
-            <span>Message</span>
+            <span className="md:text-start">Message</span>
             <textarea
-              className=" min-h-[300px] outline-cyan-500 rounded-sm resize-none shadow text-lg p-2 min-w-fit self-center text-gray-800 bg-slate-200  focus:bg-gray-100 focus:outline-1"
+              className=" w-full h-64 outline-cyan-500 rounded-sm resize-none shadow-inner  text-lg p-2 min-w-fit self-center text-gray-800 bg-slate-200 md:min-h-fit focus:shadow-none  focus:bg-gray-100 focus:outline-1"
               type="text"
               name="Message"
               value={inputs.Message || ""}
               onChange={handleChange}
+              placeholder="Enters more details for your inquiry."
             ></textarea>
           </label>
         </div>
