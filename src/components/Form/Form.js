@@ -28,7 +28,7 @@ export const Form = () => {
   };
 
   return (
-    <div className=" border-y-4 border-red-300 bg-gray-50 p-6 m-5 rounded-sm max-w-xs sm:max-w-sm md:max-w-2xl">
+    <div className=" border-y-4 border-red-300 dark:border-red-800 bg-gray-50 dark:bg-slate-600 p-6 m-5 rounded-sm max-w-xs sm:max-w-sm md:max-w-2xl">
       <form
         className="pl-2 pb-1 text-lg user select-none"
         onSubmit={handleSubmit}
@@ -112,6 +112,7 @@ export const Form = () => {
           <input
             className="text-lg mx-4 text-gray-50  font-semibold p-3 shadow rounded-sm border-none bg-cyan-500 active:text-gray-200 hover:text-gray-200 focus:text:gray-200 hover:cursor-pointer"
             type="submit"
+            value="Submit"
           />
         </div>
       </form>

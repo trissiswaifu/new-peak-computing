@@ -6,15 +6,19 @@ import { NewPeakComputingLogo } from "../NewPeakComputingLogo";
 import { TwitterLogo } from "../TwitterLogo";
 import { Divider } from "../Divider";
 
+//TODO add dynamic time for the @
+
 export const Footer = () => {
   return (
-    <footer className="bg-gray-300 mt-auto">
+    <footer className="bg-gray-300 dark:bg-gray-900 mt-auto">
       <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
         <div className="flex flex-col items-center justify-start p-3 mr-8">
-          <h5 className="p-2 text-gray-800 text-xl">Stay Posted</h5>
+          <h5 className="p-2 text-gray-800 dark:text-gray-400 text-xl">
+            Stay Posted
+          </h5>
           <div className=" flex flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
             <a
-              className="bg-gray-200 p-2 rounded:sm shadow cursor-pointer hover:bg-gray-50 hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
+              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-300 hover:shadow-none ease-in-out duration-150"
               rel="noreferrer"
               target="_blank"
               href={newPeakFacebook}
@@ -22,7 +26,7 @@ export const Footer = () => {
               <FacebookLogo fontSize={20} />
             </a>
             <a
-              className="bg-gray-200 p-2 rounded:sm shadow cursor-pointer hover:bg-gray-50 hover:opacity-90 hover:shadow-none hover:ease-in-out duration-200"
+              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:bg-gray-100  dark:hover:bg-gray-300 hover:shadow-none ease-in-out duration-150"
               rel="noreferrer"
               target="_blank"
               href={newPeakTwitter}
@@ -63,7 +67,7 @@ export const Footer = () => {
       <Divider shade={500} xInset={"auto"} />
       <div className="flex flex-col justify-center items-center lg:p-4 lg:mr-20 lg:gap-4 lg:justify-end lg:flex-row">
         <NewPeakComputingLogo width={100} />
-        <p className="flex mt-12 justify-center text-gray-800">
+        <p className="flex mt-12 justify-center text-gray-800 dark:text-gray-50">
           © 2023 New Peak Computing. All rights reserved.
         </p>
       </div>
