@@ -9,24 +9,23 @@ export const HomeOverViewBox = ({ children, textButton, url }) => {
 
   return (
     <motion.div
-      transition={{ duration: 0.3 }}
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      className=" min-h-[500px] md:min-h-[300px] flex justify-center"
+      transition={{ duration: 0.35 }}
+      animate={{ opacity: 1, x: 0 }}
+      initial={{ x: "200%", opacity: 0 }}
+      className="flex flex-col px-2 gap-2 max-w-md"
     >
-      <div className="pl-2 pr-2 flex flex-col gap-4 max-w-lg">
-        <div className="flex gap-4 items-baseline mb-1 mt-2"></div>
-
-        <p className="p-6 text-gray-700 text-left text-base">{children}</p>
-        <button
-          onClick={() => {
-            handleClick(url);
-          }}
-          className=" mr-4 self-end align bg-cyan-600 text-gray-200 active:text-gray-50 p-4 w-40 lg:hover:text-gray-50 font-semibold active:shadow-md hover:shadow-md"
-        >
-          {textButton}
-        </button>
-      </div>
+      <p className="p-6 text-gray-700 dark:text-gray-100 text-left text-base">
+        {children}
+      </p>
+      <button
+        onClick={() => {
+          handleClick(url);
+        }}
+        className="mr-4 self-end align bg-cyan-600 text-gray-200 font-semibold px-4 py-2 active:text-gray-50 hover:text-gray-50 active:shadow-md hover:bg-cyan-700 hover:shadow-md"
+      >
+        {textButton}
+      </button>
     </motion.div>
+    // </motion.div>
   );
 };

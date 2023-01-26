@@ -10,7 +10,7 @@ import { Divider } from "../Divider";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-300 dark:bg-gray-900 mt-auto">
+    <footer className="bg-slate-300 dark:bg-gray-900 mt-auto">
       <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
         <div className="flex flex-col items-center justify-start p-3 mr-8">
           <h5 className="p-2 text-gray-800 dark:text-gray-400 text-xl">

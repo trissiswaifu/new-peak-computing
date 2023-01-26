@@ -9,7 +9,7 @@ export const HomePageServiceListItem = ({ service }) => {
       <span className="rounded:sm bg-cyan-800 p-2  text-gray-50">
         <BsArrowRight />
       </span>
-      <span className="text-base">{service}</span>
+      <span className="text-lg ">{service}</span>
     </li>
   );
 };
