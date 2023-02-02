@@ -28,12 +28,12 @@ export const Form = () => {
   };
 
   return (
-    <div className=" border-y-4 border-red-300 dark:border-red-800 bg-gray-50 dark:bg-slate-600 p-6 m-5 rounded-sm max-w-xs sm:max-w-sm md:max-w-2xl">
+    <div className=" m-5 max-w-xs rounded-sm border-y-4 border-red-300 bg-gray-50 p-6 dark:border-red-800 dark:bg-slate-600 sm:max-w-sm md:max-w-2xl">
       <form
-        className="pl-2 pb-1 text-lg user select-none"
+        className="user select-none pl-2 pb-1 text-lg"
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-col items-center pb-8 md:flex-row md:justify-center md:gap8">
+        <div className="md:gap8 flex flex-col items-center pb-8 md:flex-row md:justify-center">
           <div>
             <div className="flex-row justify-center p-8">
               <LabelInput
@@ -96,10 +96,10 @@ export const Form = () => {
           />
         </div>
         <div className="flex flex-col justify-center p-4">
-          <label className="text-start flex flex-col">
+          <label className="flex flex-col text-start">
             <span className="md:text-start">Message</span>
             <textarea
-              className=" w-full h-64 outline-cyan-500 rounded-sm resize-none shadow-inner  text-lg p-2 min-w-fit self-center text-gray-800 bg-slate-200 md:min-h-fit focus:shadow-none  focus:bg-gray-100 focus:outline-1"
+              className=" h-64 w-full min-w-fit resize-none self-center rounded-sm  bg-slate-200 p-2 text-lg text-gray-800 shadow-inner outline-cyan-500 focus:bg-gray-100 focus:shadow-none  focus:outline-1 md:min-h-fit"
               type="text"
               name="Message"
               value={inputs.Message || ""}
@@ -108,9 +108,9 @@ export const Form = () => {
             ></textarea>
           </label>
         </div>
-        <div className="flex justify-end items-center">
+        <div className="flex items-center justify-end">
           <input
-            className="text-lg mx-4 text-gray-50  font-semibold p-3 shadow rounded-sm border-none bg-cyan-500 active:text-gray-200 hover:text-gray-200 focus:text:gray-200 hover:cursor-pointer"
+            className="focus:text:gray-200 mx-4 rounded-sm  border-none bg-cyan-500 p-3 text-lg font-semibold text-gray-50 shadow hover:cursor-pointer hover:text-gray-200 active:text-gray-200"
             type="submit"
             value="Submit"
           />

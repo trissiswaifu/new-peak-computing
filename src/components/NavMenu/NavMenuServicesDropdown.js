@@ -11,12 +11,12 @@ export const NavMenuServicesDropdown = () => {
 
   return (
     <NavigationMenu.Root className="text-base xl:text-lg">
-      <NavigationMenu.Trigger className="active:text-cyan-500 flex items-center gap-1">
+      <NavigationMenu.Trigger className="flex items-center gap-1 active:text-cyan-500">
         Services
         <BsChevronLeft aria-hidden />
       </NavigationMenu.Trigger>
       <NavigationMenu.Portal>
-        <NavigationMenu.Content className="container max-w-xs grid grid-cols-1 gap-2 bg-gray-50 rounded:sm p-2">
+        <NavigationMenu.Content className="rounded:sm container grid max-w-xs grid-cols-1 gap-2 bg-gray-50 p-2">
           <NavigationMenu.Item
             onSelect={() => {
               handleNavigate("/services/website-design");

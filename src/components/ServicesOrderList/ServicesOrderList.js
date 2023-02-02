@@ -6,7 +6,7 @@ export const ServicesOrderList = ({ serviceListItems }) => {
       {serviceListItems.map((item, index) => (
         <li key={index}>
           <div className="flex items-center gap-2">
-            <IoMdCheckmarkCircle className="text-cyan-500 rounded " />
+            <IoMdCheckmarkCircle className="rounded text-cyan-500 " />
             <p>{item.details}</p>
           </div>
         </li>

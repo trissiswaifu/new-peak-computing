@@ -22,7 +22,7 @@ export const NavList = () => {
   return (
     <NavigationMenu.Root className="">
       <NavigationMenu.List
-        className={`flex flex-col lg:flex-row text-gray-600  gap-2 p-2 lg:text-gray-50`}
+        className={`flex flex-col gap-2 p-2  text-gray-600 lg:flex-row lg:text-gray-50`}
       >
         <NavigationMenu.Item>
           <Link className="text-xl hover:text-gray-800 " to="/">
@@ -31,7 +31,7 @@ export const NavList = () => {
         </NavigationMenu.Item>
         <NavigationMenu.Item>
           <Link
-            className="text-xl overflow-hidden whitespace-nowrap "
+            className="overflow-hidden whitespace-nowrap text-xl "
             to="/contact"
           >
             Contact Us
@@ -43,7 +43,7 @@ export const NavList = () => {
             onClick={() => {
               handleVisibility("services");
             }}
-            className={`text-xl flex items-center bg-inherit gap-1 xl:text-lg`}
+            className={`flex items-center gap-1 bg-inherit text-xl xl:text-lg`}
           >
             Services
             <motion.div
@@ -65,7 +65,7 @@ export const NavList = () => {
                   initial={{ x: 1000, opacity: 0 }}
                   exit={{ x: -500 }}
                   transition={{ duration: 0.35 }}
-                  className="rounded:sm p-1 right-0 top-full gap-6 z-50 flex flex-col mt-4"
+                  className="rounded:sm right-0 top-full z-50 mt-4 flex flex-col gap-6 p-1"
                 >
                   <ListItem
                     to="/services/website-design"
@@ -107,7 +107,7 @@ export const NavList = () => {
             onClick={() => {
               handleVisibility("samples");
             }}
-            className={`text-xl flex items-center bg-inherit gap-1 xl:text-lg`}
+            className={`flex items-center gap-1 bg-inherit text-xl xl:text-lg`}
           >
             Samples
             <motion.div
@@ -129,7 +129,7 @@ export const NavList = () => {
                   initial={{ x: 1000, opacity: 0 }}
                   exit={{ x: -500 }}
                   transition={{ duration: 0.35 }}
-                  className=" p-2 right-0 top-full gap-5 z-50 flex flex-col mt-4 max-w-lg mr-4"
+                  className=" right-0 top-full z-50 mt-4 mr-4 flex max-w-lg flex-col gap-5 p-2"
                 >
                   <ListItem
                     to="/services/website-design"

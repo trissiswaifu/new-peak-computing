@@ -10,15 +10,15 @@ import { Divider } from "../Divider";
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-300 dark:bg-gray-900 mt-auto">
-      <div className="flex flex-col lg:flex-row lg:gap-4 lg:items-center lg:justify-center">
-        <div className="flex flex-col items-center justify-start p-3 mr-8">
-          <h5 className="p-2 text-gray-800 dark:text-gray-400 text-xl">
+    <footer className="mt-auto bg-slate-300 dark:bg-gray-900">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-4">
+        <div className="mr-8 flex flex-col items-center justify-start p-3">
+          <h5 className="p-2 text-xl text-gray-800 dark:text-gray-400">
             Stay Posted
           </h5>
-          <div className=" flex flex-row items-center p-2 gap-4 max-w-fit rounded m-2 mb-12">
+          <div className=" m-2 mb-12 flex max-w-fit flex-row items-center gap-4 rounded p-2">
             <a
-              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-300 hover:shadow-none ease-in-out duration-150"
+              className="cursor-pointer rounded bg-gray-200 p-2 shadow duration-150 ease-in-out hover:bg-gray-100 hover:shadow-none dark:hover:bg-gray-300"
               rel="noreferrer"
               target="_blank"
               href={newPeakFacebook}
@@ -26,7 +26,7 @@ export const Footer = () => {
               <FacebookLogo fontSize={20} />
             </a>
             <a
-              className="bg-gray-200 p-2 rounded shadow cursor-pointer hover:bg-gray-100  dark:hover:bg-gray-300 hover:shadow-none ease-in-out duration-150"
+              className="cursor-pointer rounded bg-gray-200 p-2 shadow duration-150  ease-in-out hover:bg-gray-100 hover:shadow-none dark:hover:bg-gray-300"
               rel="noreferrer"
               target="_blank"
               href={newPeakTwitter}
@@ -35,7 +35,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-12 items-start max-w-7xl lg:gap-16">
+        <div className="grid max-w-7xl grid-cols-12 items-start lg:gap-16">
           <FooterColumns
             header={"Company"}
             links={[
@@ -65,9 +65,9 @@ export const Footer = () => {
         </div>
       </div>
       <Divider shade={500} xInset={"auto"} />
-      <div className="flex flex-col justify-center items-center lg:p-4 lg:mr-20 lg:gap-4 lg:justify-end lg:flex-row">
+      <div className="flex flex-col items-center justify-center lg:mr-20 lg:flex-row lg:justify-end lg:gap-4 lg:p-4">
         <NewPeakComputingLogo width={100} />
-        <p className="flex mt-12 justify-center text-gray-800 dark:text-gray-50">
+        <p className="mt-12 flex justify-center text-gray-800 dark:text-gray-50">
           © 2023 New Peak Computing. All rights reserved.
         </p>
       </div>

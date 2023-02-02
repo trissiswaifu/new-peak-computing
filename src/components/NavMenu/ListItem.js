@@ -9,7 +9,7 @@ export const ListItem = ({ to, title, body }) => {
     //     <p className="text-gray-600">{body}</p>
     //   </Link>
     // </li>
-    <li className="bg-gray-50 rounded-sm shadow border-l-4 border-red-500 max-w-md">
+    <li className="max-w-md rounded-sm border-l-4 border-red-500 bg-gray-50 shadow">
       <Link className="block p-6 text-gray-800" to={to}>
         <div className="text-xl font-medium">{title}</div>
         <p className="text-gray-600">{body}</p>

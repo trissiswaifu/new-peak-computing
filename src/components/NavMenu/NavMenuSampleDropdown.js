@@ -11,12 +11,12 @@ export const NavMenuSampleDropdown = () => {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
-        <div className="flex items-center bg-inherit gap-1 xl:text-lg">
+        <div className="flex items-center gap-1 bg-inherit xl:text-lg">
           <span>Samples</span>
           <BsChevronLeft className="text-gray-50" />
         </div>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="container max-w-xs mt-2 grid grid-cols-1 gap-2 bg-gray-50 rounded p-2 text-red-900">
+      <DropdownMenu.Content className="container mt-2 grid max-w-xs grid-cols-1 gap-2 rounded bg-gray-50 p-2 text-red-900">
         <DropdownMenu.Item
           onSelect={() => {
             handleNavigate("/services/website-design");

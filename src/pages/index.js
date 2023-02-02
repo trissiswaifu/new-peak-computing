@@ -28,12 +28,12 @@ const IndexPage = () => {
         animate={{ x: 0, opacity: 1 }}
         initial={{ x: 500, opacity: 0 }}
       >
-        <section className="pt-60 bg-gray-300 dark:bg-gray-400 h-screen bg-no-repeat back bg-cover bg-blend-multiply bg-[url('../assets/mountain.png')]">
-          <div className="gap-8 items-center flex  flex-col justify-center">
+        <section className="back h-screen bg-gray-300 bg-[url('../assets/mountain.png')] bg-cover bg-no-repeat pt-60 bg-blend-multiply dark:bg-gray-400">
+          <div className="flex flex-col items-center  justify-center gap-8">
             <strong className={"header-styles"}>New Peak Computing</strong>
             <div>
               <Link to="/contact">
-                <button className="bg-cyan-600 rounded-sm text-gray-200 hover:text-gray-50 shadow-sm hover:shadow-none hover:bg-cyan-700  p-2">
+                <button className="rounded-sm bg-cyan-600 p-2 text-gray-200 shadow-sm hover:bg-cyan-700 hover:text-gray-50  hover:shadow-none">
                   Start your project
                 </button>
               </Link>
@@ -41,15 +41,15 @@ const IndexPage = () => {
           </div>
         </section>
         <section className={"flex justify-center py-8"}>
-          <div className="pt-2  pb-2 flex flex-col gap-8 items-center justify-center lg:flex-row lg:items-start">
+          <div className="flex  flex-col items-center justify-center gap-8 pt-2 pb-2 lg:flex-row lg:items-start">
             <h2 className="text-3xl font-medium">Who We Are</h2>
             <img
               // className="w-72 sm:w-96"
               src={manWithLaptop}
               alt="Person using a laptop"
-              className="max-w-full brightness-90 lg:max-w-lg lg:p-2 rounded:sm"
+              className="rounded:sm max-w-full brightness-90 lg:max-w-lg lg:p-2"
             />
-            <div className="flex flex-col p-5  gap-6">
+            <div className="flex flex-col gap-6  p-5">
               <p className="text-base text-gray-700 dark:text-gray-100">
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
@@ -60,7 +60,7 @@ const IndexPage = () => {
                 established ourselves as a leader in the industry. Our services
                 include
               </p>
-              <ul className="flex m-auto flex-col  gap-4 bg-gray-200 dark:bg-gray-700 max-w-lg rounded-sm border-red-600 border-t-4 p-4 my-8">
+              <ul className="m-auto my-8 flex  max-w-lg flex-col gap-4 rounded-sm border-t-4 border-red-600 bg-gray-200 p-4 dark:bg-gray-700">
                 <HomePageServiceListItem
                   service={"Website Design, Development, & Hosting"}
                 />
@@ -93,7 +93,7 @@ const IndexPage = () => {
         </section>
         <section className="my-20">
           <Tabs.Root
-            className="flex flex-col md:flex-row justify-center items-center md:gap-8 md:p-4  border-gray-300 border-t-2  lg:border-t-0"
+            className="flex flex-col items-center justify-center border-t-2 border-gray-300 md:flex-row  md:gap-8 md:p-4  lg:border-t-0"
             defaultValue="servicesTab"
           >
             <Tabs.List
@@ -102,36 +102,36 @@ const IndexPage = () => {
             >
               <Tabs.Trigger
                 value="servicesTab"
-                className="text-gray-800 dark:text-gray-100 flex flex-col md:flex-row gap-3 font-medium  items-start p-2 rounded-sm hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-600 ease-in duration-50"
+                className="duration-50 flex flex-col items-start gap-3 rounded-sm p-2  font-medium text-gray-800 ease-in hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:bg-gray-600 md:flex-row"
               >
-                <div className="text-red-200 bg-red-600 dark:bg-red-800 rounded:sm px-4 py-2">
+                <div className="rounded:sm bg-red-600 px-4 py-2 text-red-200 dark:bg-red-800">
                   <FaHandshake />
                 </div>
                 Services
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="contactTab"
-                className="text-gray-800 dark:text-gray-100 flex flex-col md:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-600 ease-in duration-50"
+                className="duration-50 flex flex-col items-start gap-3 rounded-sm p-2 font-medium text-gray-800 ease-in hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:bg-gray-600 md:flex-row"
               >
-                <div className="text-red-200 bg-red-600  dark:bg-red-800 rounded:sm px-4 py-2">
+                <div className="rounded:sm bg-red-600  px-4 py-2 text-red-200 dark:bg-red-800">
                   <AiOutlineMail />
                 </div>
                 Contact
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="samplesTab"
-                className="text-gray-800 dark:text-gray-100 flex flex-col md:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-600 ease-in duration-50"
+                className="duration-50 flex flex-col items-start gap-3 rounded-sm p-2 font-medium text-gray-800 ease-in hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:bg-gray-600 md:flex-row"
               >
-                <div className="text-red-200 bg-red-600 dark:bg-red-800 rounded:sm px-4 py-2">
+                <div className="rounded:sm bg-red-600 px-4 py-2 text-red-200 dark:bg-red-800">
                   <IoIosPaper />
                 </div>
                 Samples
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="blogTab"
-                className=" text-gray-800 dark:text-gray-100 flex flex-col md:flex-row gap-3 font-medium items-start p-2 rounded-sm hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-600 ease-in duration-50"
+                className=" duration-50 flex flex-col items-start gap-3 rounded-sm p-2 font-medium text-gray-800 ease-in hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:bg-gray-600 md:flex-row"
               >
-                <div className="text-red-200 bg-red-600 dark:bg-red-800 rounded:sm px-4 py-2">
+                <div className="rounded:sm bg-red-600 px-4 py-2 text-red-200 dark:bg-red-800">
                   <CgWebsite />
                 </div>
                 Blog
