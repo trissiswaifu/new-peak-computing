@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "ptformat": "prettier --write src/"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^1.0.0",

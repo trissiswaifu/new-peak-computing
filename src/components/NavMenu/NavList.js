@@ -22,16 +22,19 @@ export const NavList = () => {
   return (
     <NavigationMenu.Root className="">
       <NavigationMenu.List
-        className={`flex flex-col gap-2 p-2  text-gray-600 lg:flex-row lg:text-gray-50`}
+        className={`flex flex-col gap-2 p-2  text-gray-600 dark:text-gray-100 lg:flex-row lg:text-gray-50`}
       >
         <NavigationMenu.Item>
-          <Link className="text-xl hover:text-gray-800 " to="/">
+          <Link
+            className="text-xl hover:text-cyan-600  dark:hover:text-cyan-300 "
+            to="/"
+          >
             Home
           </Link>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
           <Link
-            className="overflow-hidden whitespace-nowrap text-xl "
+            className=" overflow-hidden  whitespace-nowrap text-xl hover:text-cyan-600 dark:hover:text-cyan-300 "
             to="/contact"
           >
             Contact Us
@@ -43,7 +46,7 @@ export const NavList = () => {
             onClick={() => {
               handleVisibility("services");
             }}
-            className={`flex items-center gap-1 bg-inherit text-xl xl:text-lg`}
+            className={`flex  items-center gap-1 bg-inherit text-xl hover:text-cyan-600 dark:hover:text-cyan-300 xl:text-lg`}
           >
             Services
             <motion.div
@@ -51,7 +54,7 @@ export const NavList = () => {
               transition={{ duration: 0.25 }}
             >
               <HiChevronDown
-                className="text-gray-600 lg:text-gray-50"
+                className="text-gray-600 dark:text-gray-100 lg:text-gray-50 "
                 aria-hidden
               />
             </motion.div>
@@ -107,7 +110,7 @@ export const NavList = () => {
             onClick={() => {
               handleVisibility("samples");
             }}
-            className={`flex items-center gap-1 bg-inherit text-xl xl:text-lg`}
+            className={`flex  items-center gap-1 bg-inherit text-xl hover:text-cyan-600 dark:hover:text-cyan-300 xl:text-lg`}
           >
             Samples
             <motion.div
@@ -115,7 +118,7 @@ export const NavList = () => {
               transition={{ duration: 0.25 }}
             >
               <HiChevronDown
-                className="text-gray-600 lg:text-gray-50"
+                className="text-gray-600 dark:text-gray-100 lg:text-gray-50"
                 aria-hidden
               />
             </motion.div>

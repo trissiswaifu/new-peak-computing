@@ -63,16 +63,23 @@ const IndexPage = () => {
               <ul className="m-auto my-8 flex  max-w-lg flex-col gap-4 rounded-sm border-t-4 border-red-600 bg-gray-200 p-4 dark:bg-gray-700">
                 <HomePageServiceListItem
                   service={"Website Design, Development, & Hosting"}
+                  url="services/website-design"
                 />
                 <HomePageServiceListItem
                   service={"Email Hosting & Management"}
+                  url="services/email-hosting"
                 />
-                <HomePageServiceListItem service={"IT Service"} />
+                <HomePageServiceListItem
+                  service={"IT Service"}
+                  url="services/it-services"
+                />
                 <HomePageServiceListItem
                   service={"Small Business Applications"}
+                  url="services/small-business-applications"
                 />
                 <HomePageServiceListItem
                   service={"Business to Business Software"}
+                  url="services/b2b-software"
                 />
                 <HomePageServiceListItem service={"Automation Services"} />
               </ul>
