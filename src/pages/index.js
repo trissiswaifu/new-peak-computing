@@ -10,6 +10,7 @@ import { IoIosPaper } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import * as Tabs from "@radix-ui/react-tabs";
 import { HomePageServiceListItem } from "../components/HomePageServiceListItem";
+import PrimaryButton from "../components/Buttons/PrimaryButton";
 
 //TODO testimonial section
 
@@ -33,23 +34,21 @@ const IndexPage = () => {
             <strong className={"header-styles"}>New Peak Computing</strong>
             <div>
               <Link to="/contact">
-                <button className="rounded-sm bg-cyan-600 p-2 text-gray-200 shadow-sm hover:bg-cyan-700 hover:text-gray-50  hover:shadow-none">
-                  Start your project
-                </button>
+                <PrimaryButton text={"Start your project"} />
               </Link>
             </div>
           </div>
         </section>
-        <section className={"flex justify-center py-8"}>
+        <section className={"flex flex-col justify-center py-8"}>
+          <h2 className="text-3xl font-semibold text-center mb-8">Who We Are</h2>
           <div className="flex  flex-col items-center justify-center gap-8 pt-2 pb-2 lg:flex-row lg:items-start">
-            <h2 className="text-3xl font-medium">Who We Are</h2>
             <img
               // className="w-72 sm:w-96"
               src={manWithLaptop}
               alt="Person using a laptop"
               className="rounded:sm max-w-full brightness-90 lg:max-w-lg lg:p-2"
             />
-            <div className="flex flex-col gap-6  p-5">
+            <div className="flex flex-col gap-6 max-w-2xl  p-5">
               <p className="text-base text-gray-700 dark:text-gray-100">
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other

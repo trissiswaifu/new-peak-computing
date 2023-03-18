@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { NewPeakComputingLogo } from "../NewPeakComputingLogo";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-import { Link, navigate } from "gatsby";
+import { navigate } from "gatsby";
 
 import { NavList } from "./NavList";
 
@@ -17,7 +17,7 @@ export const NavMenu = () => {
 
   return (
     <nav>
-      <div className="sticky top-0 z-50 flex items-center justify-between border-b-2 border-gray-800 bg-cyan-600 pr-2 dark:border-slate-400 dark:bg-cyan-900">
+      <div className="sticky top-0 z-50 flex items-center justify-between border-b-2 border-gray-800 bg-gray-100 pr-2 dark:border-slate-400 dark:bg-cyan-900">
         <div
           onClick={() => {
             navigate("/");
@@ -42,8 +42,8 @@ export const NavMenu = () => {
               <motion.span
                 initial={{ x: 0, opacity: 1 }}
                 className="h-0.5 w-8 bg-gray-900 dark:bg-gray-50"
-                animate={menuOpen ? { x: 0, opacity: 0 } : { x: 0, opacity: 1 }}
-                transition={{ duration: 0.15 }}
+                animate={menuOpen ? { x: 50, opacity: 1 } : { x: 0, opacity: 1 }}
+                transition={{ duration: 0.3 }}
               />
               <motion.span
                 initial={{ x: 0, opacity: 1 }}
