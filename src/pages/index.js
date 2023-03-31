@@ -40,7 +40,9 @@ const IndexPage = () => {
           </div>
         </section>
         <section className={"flex flex-col justify-center py-8"}>
-          <h2 className="text-3xl font-semibold text-center mb-8">Who We Are</h2>
+          <h2 className="mb-8 text-center text-3xl font-semibold">
+            Who We Are
+          </h2>
           <div className="flex  flex-col items-center justify-center gap-8 pt-2 pb-2 lg:flex-row lg:items-start">
             <img
               // className="w-72 sm:w-96"
@@ -48,7 +50,7 @@ const IndexPage = () => {
               alt="Person using a laptop"
               className="rounded:sm max-w-full brightness-90 lg:max-w-lg lg:p-2"
             />
-            <div className="flex flex-col gap-6 max-w-2xl  p-5">
+            <div className="flex max-w-2xl flex-col gap-6  p-5">
               <p className="text-base text-gray-700 dark:text-gray-100">
                 New Peak Computing is a Website development firm with over 20
                 years of experience in blockchain, manufacturing, and other
